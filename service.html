@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事業内容 | LINSAI</title>
+    <style>
+        /* 全局样式与首页一致，此处省略重复，实际使用时需包含完整样式 */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height:1.7; color:#1a1a1a; background:#fff; }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        header { border-bottom:1px solid #e5e5e5; padding:20px 0; }
+        .header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+        .logo { font-size:1.8rem; font-weight:700; letter-spacing:1px; color:#2c3e50; text-decoration:none; }
+        .nav-menu { display:flex; list-style:none; gap:32px; flex-wrap:wrap; }
+        .nav-menu a { text-decoration:none; color:#2c3e50; font-weight:500; font-size:0.95rem; transition:color 0.2s; }
+        .nav-menu a:hover { color:#c0392b; }
+        .lang-switch { display:flex; gap:8px; font-size:0.9rem; }
+        .lang-switch a { text-decoration:none; color:#888; }
+        .lang-switch a.active { color:#1a1a1a; font-weight:500; }
+        footer { border-top:1px solid #eee; padding:30px 0; margin-top:60px; text-align:center; color:#888; font-size:0.9rem; }
+        /* 页面特有样式 */
+        .page-title { background:#f9f9f9; padding:60px 0 20px; text-align:center; margin-bottom:50px; }
+        .page-title h1 { font-size:2.4rem; font-weight:500; letter-spacing:2px; }
+        .section { padding:40px 0 60px; }
+        .section h2 { font-size:1.8rem; font-weight:500; margin-bottom:30px; padding-bottom:10px; border-bottom:2px solid #c0392b; display:inline-block; }
+        .two-col { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin:40px 0; }
+        .col h3 { font-size:1.5rem; margin-bottom:20px; color:#2c3e50; }
+        .img-placeholder { background:#eaeef2; height:200px; border-radius:8px; margin:20px 0; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg>'); background-repeat:no-repeat; background-position:center; background-size:40px; }
+        .feature-list { background:#f5f5f5; padding:30px; border-radius:12px; margin:40px 0; }
+        @media (max-width:768px) { .nav-menu { display:none; } .two-col { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LINSAI</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="company.html">企業情報</a></li>
+                <li><a href="message.html">創業者メッセージ</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <div class="lang-switch">
+                <a href="#" class="active">JP</a>
+                <span>/</span>
+                <a href="#">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <div class="container">
+            <h1>事業内容</h1>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- 事业概要 -->
+        <section class="section">
+            <h2>事業の概要</h2>
+            <p style="font-size:1.1rem; color:#c0392b; margin:20px 0;">ここにキャッチコピーや事業理念を簡潔に入れてください。</p>
+            <p>[您的公司名称]は、[年]に[場所]で創業しました。私たちは[コア技術/価値]を基盤に、[事業領域]に取り組んでいます。創業以来、[大切にしている価値観]を胸に、技術者・クリエイターが「作りたい」を実現できる環境づくりを支援しています。</p>
+            <p>現在、私たちの会社は2つの事業で成り立っています。一つは、[事業Aの概要]、もう一つは、[事業Bの概要]です。</p>
+        </section>
+
+        <!-- 第一事业 -->
+        <section class="section">
+            <h2>オリジナル製品事業</h2>
+            <div class="two-col">
+                <div class="col">
+                    <h3>小型工作ツールの開発・販売</h3>
+                    <p>[製品カテゴリ]を中心に、卓上で使えるコンパクトな工作機械を開発・販売しています。私たちは、「[信念/キャッチフレーズ]」という信念のもと、高い性能と使いやすさを両立した製品を提供します。</p>
+                    <p>代表的な製品は「[製品名A]」です。これは[特徴・用途]。大学・研究機関から個人クリエイターまで、幅広い方々に利用いただいています。</p>
+                    <div class="img-placeholder"></div>
+                </div>
+                <div class="col">
+                    <h3>射出成形機と金型加工</h3>
+                    <p>[製品名B]は、卓上で手軽に射出成形を可能にする機械です。特に、サステナブル素材の成形テストなどに活用されています。</p>
+                    <p>[製品名A]と[製品名B]を組み合わせれば、その日のうちに金型製作から成形までを完了することも可能です。これにより、開発スピードを大幅に向上させます。</p>
+                    <div class="img-placeholder"></div>
+                </div>
+            </div>
+            <div class="feature-list">
+                <dl>
+                    <dt style="font-weight:600; color:#c0392b;">主な導入先 / 活用事例</dt>
+                    <dd>・[機関名/企業名A]、[機関名/企業名B] など、多くの研究機関・大学で採用されています。</dd>
+                    <dd>・[業界/分野]における試作開発、[具体的な製品例]の部品製造に利用されています。</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- 第二事业 -->
+        <section class="section">
+            <h2>第二事業（例：保守部品・サービス事業）</h2>
+            <p>[事業名]は、[サービス概要]を提供する事業です。主な顧客は[顧客層]で、[課題]を抱えるお客様に[ソリューション]を提供しています。</p>
+            <div class="two-col">
+                <div class="col">
+                    <h3>事業の特徴：豊富な在庫と迅速な対応</h3>
+                    <p>[課題：例えば、生産終了品の入手困難、設備停止リスクなど]に対応するため、当社は[在庫数]点以上の[製品ジャンル]を常時在庫しています。即日発送体制を整え、お客様の急なニーズに応えます。</p>
+                    <div class="img-placeholder"></div>
+                </div>
+                <div class="col">
+                    <h3>品質へのこだわり</h3>
+                    <p>当社では、すべての製品に対して独自の動作確認ソフトウェアとマニュアルに基づく徹底した検査を実施しています。[年数]年以上培ったノウハウにより、担当者によらない高い検査品質を維持しています。</p>
+                    <div class="img-placeholder"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
