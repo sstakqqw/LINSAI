@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LINSAI · 企業情報</title>
+    <title>LINSAI | ものづくりの楽しさと夢を提供します</title>
     <style>
-        /* ----- 基础重置与字体 ----- */
+        /* ----- 全局样式 (所有页面共用) ----- */
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +22,7 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-        /* ----- 头部导航 (简洁版) ----- */
+        /* 头部导航 (所有页面相同) */
         header {
             border-bottom: 1px solid #e5e5e5;
             padding: 20px 0;
@@ -31,6 +31,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .logo {
             font-size: 1.8rem;
@@ -43,6 +44,7 @@
             display: flex;
             list-style: none;
             gap: 32px;
+            flex-wrap: wrap;
         }
         .nav-menu a {
             text-decoration: none;
@@ -67,153 +69,34 @@
             color: #1a1a1a;
             font-weight: 500;
         }
-        /* ----- 主视觉 理念区 ----- */
-        .vision {
-            padding: 100px 0 80px;
-            text-align: center;
-            background: #f9f9f9;
-            margin-bottom: 60px;
-        }
-        .vision h1 {
-            font-size: 2.2rem;
-            font-weight: 400;
-            line-height: 1.4;
-            margin-bottom: 30px;
-            color: #1a1a1a;
-        }
-        .vision h1 span {
-            display: block;
-            font-size: 1rem;
-            color: #c0392b;
-            margin-top: 20px;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-        .vision-lead {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            color: #4a4a4a;
-        }
-        /* ----- 新闻区块 ----- */
-        .news-section {
-            padding: 40px 0 70px;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-        }
-        .news-list {
-            border-top: 1px solid #ddd;
-        }
-        .news-item {
-            display: flex;
-            align-items: center;
-            padding: 18px 0;
-            border-bottom: 1px solid #eee;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        .news-date {
-            min-width: 100px;
-            color: #666;
-            font-size: 0.95rem;
-        }
-        .news-category {
-            background: #f0f0f0;
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: #333;
-            min-width: 70px;
-            text-align: center;
-        }
-        .news-title {
-            flex: 1;
-            color: #1a1a1a;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .news-title:hover {
-            color: #c0392b;
-            text-decoration: underline;
-        }
-        .more-link {
-            text-align: right;
-            margin-top: 30px;
-        }
-        .more-link a {
-            color: #c0392b;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .more-link a:hover {
-            text-decoration: underline;
-        }
-        /* ----- 底部跳转卡片 (三列) ----- */
-        .bottom-links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 60px 0 40px;
-        }
-        .link-card {
-            background: #f5f5f5;
-            padding: 40px 30px;
-            text-align: center;
-            transition: background 0.2s;
-            text-decoration: none;
-            color: #1a1a1a;
-            border-radius: 4px;
-        }
-        .link-card:hover {
-            background: #eaeaea;
-        }
-        .link-card h3 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        .link-card p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        /* ----- 页脚 ----- */
+        /* 页脚 (所有页面相同) */
         footer {
             border-top: 1px solid #eee;
             padding: 30px 0;
-            margin-top: 30px;
+            margin-top: 60px;
             text-align: center;
             color: #888;
             font-size: 0.9rem;
         }
         /* 响应式 */
         @media (max-width: 768px) {
-            .nav-menu { display: none; } /* 简化移动端菜单 */
-            .vision { padding: 60px 0; }
-            .vision h1 { font-size: 1.8rem; }
-            .news-item { flex-direction: column; align-items: flex-start; gap: 8px; }
-            .bottom-links { grid-template-columns: 1fr; }
+            .nav-menu {
+                display: none; /* 简化移动端，实际可用汉堡菜单，此处略 */
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-inner">
-            <a href="/" class="logo">LINSAI</a>
+            <a href="index.html" class="logo">LINSAI</a>
             <ul class="nav-menu">
-                <li><a href="#">TOP</a></li>
-                <li><a href="#">事業内容</a></li>
-                <li><a href="#">企業情報</a></li>
-                <li><a href="#">メッセージ</a></li>
-                <li><a href="#">採用情報</a></li>
-                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="company.html">企業情報</a></li>
+                <li><a href="message.html">創業者メッセージ</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
             <div class="lang-switch">
                 <a href="#" class="active">JP</a>
@@ -224,75 +107,54 @@
     </header>
 
     <main>
-        <!-- 企业理念 / 主视觉区 (请替换为您自己的文案) -->
-        <section class="vision">
+        <!-- 主视觉 -->
+        <section style="background: #f5f7fa; padding: 100px 0; text-align: center;">
             <div class="container">
-                <h1>
-                    人はなぜ、ものをつくるのか。<br>
-                    「つくりたい」という欲求はどこからくるのか。<br>
-                    技術者にとって、つくることは生きることだ。<br>
-                    <span>LINSAIは、「つくりたい」をつくる会社です。</span>
-                </h1>
-                <div class="vision-lead">
-                    这里可以写一段简短的介绍，描述您公司的使命、愿景或核心技术理念。
-                </div>
+                <h1 style="font-size: 2.5rem; font-weight: 400; margin-bottom: 20px;">人はなぜ、ものをつくるのか。<br>「つくりたい」という欲求はどこからくるのか。</h1>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #4a4a4a;">技術者にとって、つくることは生きることだ。LINSAIは、「つくりたい」をつくる会社です。</p>
             </div>
         </section>
 
-        <!-- 新闻动态 (请替换为您自己的新闻) -->
-        <section class="news-section">
-            <div class="container">
-                <h2 class="section-title">NEWS</h2>
-                <div class="news-list">
-                    <!-- 每条新闻都是一个 .news-item -->
-                    <div class="news-item">
-                        <span class="news-date">2026.03.12</span>
-                        <span class="news-category">お知らせ</span>
-                        <a href="#" class="news-title">新製品「Powercore V3」の出荷を開始しました。</a>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">2026.02.28</span>
-                        <span class="news-category">採用情報</span>
-                        <a href="#" class="news-title">2027年卒向け 会社説明会の日程を公開しました。</a>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">2026.02.10</span>
-                        <span class="news-category">お知らせ</span>
-                        <a href="#" class="news-title">Webサイトをリニューアルしました。</a>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">2026.01.25</span>
-                        <span class="news-category">メディア</span>
-                        <a href="#" class="news-title">技術雑誌「メカニック」に当社の切削技術が掲載されました。</a>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">2025.12.05</span>
-                        <span class="news-category">お知らせ</span>
-                        <a href="#" class="news-title">年末年始休業のお知らせ</a>
-                    </div>
+        <!-- 新闻区块 -->
+        <section class="container" style="padding: 60px 0;">
+            <h2 style="font-size: 2rem; font-weight: 500; margin-bottom: 40px; border-bottom: 2px solid #c0392b; display: inline-block;">NEWS</h2>
+            <div style="border-top: 1px solid #ddd;">
+                <!-- 每条新闻 -->
+                <div style="display: flex; align-items: center; padding: 18px 0; border-bottom: 1px solid #eee; gap: 25px; flex-wrap: wrap;">
+                    <span style="min-width: 100px; color: #666;">2026.03.12</span>
+                    <span style="background: #f0f0f0; padding: 4px 12px; border-radius: 30px; font-size: 0.75rem; color: #333;">お知らせ</span>
+                    <a href="#" style="flex: 1; color: #1a1a1a; text-decoration: none;">新製品「Powercore V3」の出荷を開始しました。</a>
                 </div>
-                <div class="more-link">
-                    <a href="#">一覧を見る →</a>
+                <div style="display: flex; align-items: center; padding: 18px 0; border-bottom: 1px solid #eee; gap: 25px; flex-wrap: wrap;">
+                    <span style="min-width: 100px; color: #666;">2026.02.28</span>
+                    <span style="background: #f0f0f0; padding: 4px 12px; border-radius: 30px; font-size: 0.75rem; color: #333;">产品情報</span>
+                    <a href="#" style="flex: 1; color: #1a1a1a; text-decoration: none;">2027年卒向け 会社説明会の日程を公開しました。</a>
                 </div>
+                <div style="display: flex; align-items: center; padding: 18px 0; border-bottom: 1px solid #eee; gap: 25px; flex-wrap: wrap;">
+                    <span style="min-width: 100px; color: #666;">2026.02.10</span>
+                    <span style="background: #f0f0f0; padding: 4px 12px; border-radius: 30px; font-size: 0.75rem; color: #333;">お知らせ</span>
+                    <a href="#" style="flex: 1; color: #1a1a1a; text-decoration: none;">Webサイトをリニューアルしました。</a>
+                </div>
+            </div>
+            <div style="text-align: right; margin-top: 30px;">
+                <a href="#" style="color: #c0392b; text-decoration: none; font-weight: 500;">一覧を見る →</a>
             </div>
         </section>
 
-        <!-- 底部链接卡片 (指向其他主要页面) -->
-        <div class="container">
-            <div class="bottom-links">
-                <a href="#" class="link-card">
-                    <h3>事業内容</h3>
-                    <p>私たちが提供する価値</p>
-                </a>
-                <a href="#" class="link-card">
-                    <h3>企業情報</h3>
-                    <p>会社概要・拠点</p>
-                </a>
-                <a href="#" class="link-card">
-                    <h3>採用情報</h3>
-                    <p>共に働く仲間を募集</p>
-                </a>
-            </div>
+        <!-- 底部快速链接 -->
+        <div class="container" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; margin: 40px 0;">
+            <a href="service.html" style="background: #f5f5f5; padding: 40px 30px; text-align: center; text-decoration: none; color: #1a1a1a; border-radius: 4px; transition: background 0.2s;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 10px;">事業内容</h3>
+                <p style="color: #666;">私たちが提供する価値</p>
+            </a>
+            <a href="company.html" style="background: #f5f5f5; padding: 40px 30px; text-align: center; text-decoration: none; color: #1a1a1a; border-radius: 4px; transition: background 0.2s;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 10px;">企業情報</h3>
+                <p style="color: #666;">会社概要・拠点</p>
+            </a>
+            <a href="products.html" style="background: #f5f5f5; padding: 40px 30px; text-align: center; text-decoration: none; color: #1a1a1a; border-radius: 4px; transition: background 0.2s;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 10px;">产品</h3>
+                <p style="color: #666;">製品ラインナップ</p>
+            </a>
         </div>
     </main>
 
