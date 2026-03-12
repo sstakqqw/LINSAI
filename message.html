@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創業者メッセージ | LINSAI</title>
+    <style>
+        /* 全局样式 (同前) */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height:1.8; color:#1a1a1a; }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        header { border-bottom:1px solid #e5e5e5; padding:20px 0; }
+        .header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+        .logo { font-size:1.8rem; font-weight:700; color:#2c3e50; text-decoration:none; }
+        .nav-menu { display:flex; list-style:none; gap:32px; flex-wrap:wrap; }
+        .nav-menu a { text-decoration:none; color:#2c3e50; font-weight:500; }
+        .nav-menu a:hover { color:#c0392b; }
+        .lang-switch { display:flex; gap:8px; }
+        .lang-switch a { text-decoration:none; color:#888; }
+        .lang-switch a.active { color:#1a1a1a; font-weight:500; }
+        footer { border-top:1px solid #eee; padding:30px 0; margin-top:60px; text-align:center; color:#888; }
+        /* 页面特有样式 */
+        .page-title { background:#f9f9f9; padding:60px 0 20px; text-align:center; margin-bottom:50px; }
+        .page-title h1 { font-size:2.4rem; font-weight:500; }
+        .message-wrapper { display:flex; gap:60px; align-items:flex-start; margin:50px 0; }
+        .message-text { flex:2; }
+        .message-text p { margin-bottom:1.8rem; }
+        .message-image { flex:1; background:#eaeef2; border-radius:8px; height:400px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M5 20v-2a7 7 0 0 1 14 0v2"/></svg>'); background-repeat:no-repeat; background-position:center; background-size:80px; }
+        @media (max-width:768px) {
+            .nav-menu { display:none; }
+            .message-wrapper { flex-direction:column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LINSAI</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="company.html">企業情報</a></li>
+                <li><a href="message.html">創業者メッセージ</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <div class="lang-switch">
+                <a href="#" class="active">JP</a>
+                <span>/</span>
+                <a href="#">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <div class="container">
+            <h1>創業者メッセージ</h1>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="message-wrapper">
+            <div class="message-text">
+                <h2 style="font-size:2rem; margin-bottom:30px;">「つくりたい」を支える</h2>
+                <p>私は子供の頃から機械いじりが大好きでした。ラジオを分解し、時計をバラバラにし、親に怒られたものです。でも、その好奇心が私の原点です。1997年、自宅の2階でたった一人始めたこの会社も、あの頃と変わらぬ「つくりたい」という気持ちで今日まで歩んできました。</p>
+                <p>技術者にとって、つくることは生きることです。私たちは、その「生きる」を支える工作機械や部品を提供しています。単なるモノ売りではなく、技術者の情熱に応える存在でありたい。その想いを形にしたのが、KitMillであり、INARIであり、保守部品.comです。</p>
+                <p>これからも、小さな機械から大きなアイデアが生まれる世界を、LINSAIは応援し続けます。</p>
+                <p style="margin-top:40px; text-align:right;">代表取締役 李 林</p>
+            </div>
+            <div class="message-image"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
