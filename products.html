@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品 | LINSAI</title>
+    <style>
+        /* 全局样式 */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height:1.7; color:#1a1a1a; background:#fff; }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        header { border-bottom:1px solid #e5e5e5; padding:20px 0; }
+        .header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+        .logo { font-size:1.8rem; font-weight:700; color:#2c3e50; text-decoration:none; }
+        .nav-menu { display:flex; list-style:none; gap:32px; flex-wrap:wrap; }
+        .nav-menu a { text-decoration:none; color:#2c3e50; font-weight:500; }
+        .nav-menu a:hover { color:#c0392b; }
+        .lang-switch { display:flex; gap:8px; }
+        .lang-switch a { text-decoration:none; color:#888; }
+        .lang-switch a.active { color:#1a1a1a; font-weight:500; }
+        footer { border-top:1px solid #eee; padding:30px 0; margin-top:60px; text-align:center; color:#888; }
+        /* 页面特有样式 */
+        .page-title { background:#f9f9f9; padding:60px 0 20px; text-align:center; margin-bottom:50px; }
+        .page-title h1 { font-size:2.4rem; font-weight:500; }
+        .product-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin:50px 0; }
+        .product-card { border:1px solid #eee; border-radius:12px; overflow:hidden; transition:box-shadow 0.2s; }
+        .product-card:hover { box-shadow:0 10px 20px rgba(0,0,0,0.05); }
+        .product-img { background:#eaeef2; height:200px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg>'); background-repeat:no-repeat; background-position:center; background-size:40px; }
+        .product-info { padding:20px; }
+        .product-info h3 { font-size:1.4rem; margin-bottom:10px; }
+        .product-info p { color:#666; margin-bottom:15px; }
+        .product-price { font-weight:600; color:#c0392b; }
+        @media (max-width:768px) {
+            .nav-menu { display:none; }
+            .product-grid { grid-template-columns:1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LINSAI</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="company.html">企業情報</a></li>
+                <li><a href="message.html">創業者メッセージ</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <div class="lang-switch">
+                <a href="#" class="active">JP</a>
+                <span>/</span>
+                <a href="#">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <div class="container">
+            <h1>产品</h1>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-info">
+                    <h3>Powercore V3</h3>
+                    <p>高精度CNCフライス。コンパクトながら本格的な切削が可能。</p>
+                    <div class="product-price">¥7,944,000</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-info">
+                    <h3>Wire Tool Kit</h3>
+                    <p>ワイヤー加工用工具セット。初心者からプロまで。</p>
+                    <div class="product-price">¥1,589,000</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-info">
+                    <h3>Wire EDM Starter Kit</h3>
+                    <p>放電加工入門キット。基本部品が揃っています。</p>
+                    <div class="product-price">¥9,532,000</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-info">
+                    <h3>KitMill S100</h3>
+                    <p>卓上CNCフライス。教育機関向けモデル。</p>
+                    <div class="product-price">¥480,000</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-info">
+                    <h3>INARI 射出成形機</h3>
+                    <p>卓上で使える手動射出成形機。試作に最適。</p>
+                    <div class="product-price">¥1,250,000</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-info">
+                    <h3>GOIGOI2 パンチプレス</h3>
+                    <p>卓上手動パンチプレス。耐久性・精度が向上。</p>
+                    <div class="product-price">¥380,000</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
