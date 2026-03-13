@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>产品 | LINSAI</title>
     <style>
-        /* ----- 全局样式 (与之前保持一致) ----- */
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
@@ -61,7 +60,6 @@
             text-align:center;
             color:#888;
         }
-        /* ----- 页面标题 ----- */
         .page-title {
             background:#f9f9f9;
             padding:60px 0 20px;
@@ -72,11 +70,9 @@
             font-size:2.4rem;
             font-weight:500;
         }
-
-        /* ----- 产品网格 (卡片可点击) ----- */
         .product-grid {
             display:grid;
-            grid-template-columns:repeat(3, 1fr);
+            grid-template-columns:repeat(3,1fr);
             gap:30px;
             margin:50px 0;
         }
@@ -87,8 +83,8 @@
             border-radius:12px;
             overflow:hidden;
             transition:box-shadow 0.2s;
-            text-decoration:none;        /* 去掉下划线 */
-            color:inherit;               /* 保持文字颜色 */
+            text-decoration:none;
+            color:inherit;
             background-color:#fff;
         }
         .product-card:hover {
@@ -97,12 +93,12 @@
         .product-img {
             width:100%;
             height:200px;
-            object-fit:cover;            /* 图片按比例裁剪，铺满区域 */
+            object-fit:cover;
             display:block;
         }
         .product-info {
             padding:20px;
-            flex:1;                      /* 让内容区占满剩余高度 */
+            flex:1;
         }
         .product-info h3 {
             font-size:1.4rem;
@@ -116,8 +112,6 @@
             font-weight:600;
             color:#c0392b;
         }
-
-        /* 响应式 */
         @media (max-width:768px) {
             .nav-menu { display:none; }
             .product-grid { grid-template-columns:1fr; }
@@ -152,7 +146,7 @@
 
     <main class="container">
         <div class="product-grid">
-            <!-- 产品卡片示例 (共20个，请按实际替换图片文件名和链接) -->
+            <!-- 1 Powercore V3 -->
             <a href="product-powercore-v3.html" class="product-card">
                 <img src="images/powercore-v3.jpg" alt="Powercore V3" class="product-img">
                 <div class="product-info">
@@ -161,6 +155,7 @@
                     <div class="product-price">¥7,944,000</div>
                 </div>
             </a>
+            <!-- 2 Wire Tool Kit -->
             <a href="product-wire-tool-kit.html" class="product-card">
                 <img src="images/wire-tool-kit.jpg" alt="Wire Tool Kit" class="product-img">
                 <div class="product-info">
@@ -169,6 +164,7 @@
                     <div class="product-price">¥1,589,000</div>
                 </div>
             </a>
+            <!-- 3 Wire EDM Starter Kit -->
             <a href="product-wire-edm-starter.html" class="product-card">
                 <img src="images/wire-edm-starter.jpg" alt="Wire EDM Starter Kit" class="product-img">
                 <div class="product-info">
@@ -177,6 +173,7 @@
                     <div class="product-price">¥9,532,000</div>
                 </div>
             </a>
+            <!-- 4 KitMill S100 -->
             <a href="product-kitmill-s100.html" class="product-card">
                 <img src="images/kitmill-s100.jpg" alt="KitMill S100" class="product-img">
                 <div class="product-info">
@@ -185,6 +182,7 @@
                     <div class="product-price">¥480,000</div>
                 </div>
             </a>
+            <!-- 5 INARI 射出成形機 -->
             <a href="product-inari.html" class="product-card">
                 <img src="images/inari.jpg" alt="INARI 射出成形機" class="product-img">
                 <div class="product-info">
@@ -193,6 +191,7 @@
                     <div class="product-price">¥1,250,000</div>
                 </div>
             </a>
+            <!-- 6 GOIGOI2 パンチプレス -->
             <a href="product-goigoi2.html" class="product-card">
                 <img src="images/goigoi2.jpg" alt="GOIGOI2 パンチプレス" class="product-img">
                 <div class="product-info">
@@ -201,7 +200,7 @@
                     <div class="product-price">¥380,000</div>
                 </div>
             </a>
-            <!-- 新增12个产品 (请继续按此格式添加，此处省略以节省篇幅，但您需要为所有20个产品都添加卡片) -->
+            <!-- 7 エアグラバー -->
             <a href="product-air-grabber.html" class="product-card">
                 <img src="images/air-grabber.jpg" alt="エアグラバー" class="product-img">
                 <div class="product-info">
@@ -210,6 +209,7 @@
                     <div class="product-price">¥128,000</div>
                 </div>
             </a>
+            <!-- 8 迷你车床 -->
             <a href="product-mini-lathe.html" class="product-card">
                 <img src="images/mini-lathe.jpg" alt="迷你车床" class="product-img">
                 <div class="product-info">
@@ -218,9 +218,97 @@
                     <div class="product-price">¥350,000</div>
                 </div>
             </a>
-            <!-- ... 其他14个产品卡片 ... 请务必按实际替换 -->
-
-            <!-- 最后两个新增产品 -->
+            <!-- 9 车床自动走刀 -->
+            <a href="product-auto-feed.html" class="product-card">
+                <img src="images/auto-feed.jpg" alt="车床自动走刀" class="product-img">
+                <div class="product-info">
+                    <h3>车床自动走刀</h3>
+                    <p>自動送り装置。作業効率を向上。</p>
+                    <div class="product-price">¥98,000</div>
+                </div>
+            </a>
+            <!-- 10 CNC电控箱 -->
+            <a href="product-cnc-control-box.html" class="product-card">
+                <img src="images/cnc-control-box.jpg" alt="CNC电控箱" class="product-img">
+                <div class="product-info">
+                    <h3>CNC电控箱</h3>
+                    <p>CNC制御用電装ボックス。配線済み。</p>
+                    <div class="product-price">¥680,000</div>
+                </div>
+            </a>
+            <!-- 11 EDM脉冲电源板 -->
+            <a href="product-edm-pulse-board.html" class="product-card">
+                <img src="images/edm-pulse-board.jpg" alt="EDM脉冲电源板" class="product-img">
+                <div class="product-info">
+                    <h3>EDM脉冲电源板</h3>
+                    <p>放電加工機用パルス電源基板。</p>
+                    <div class="product-price">¥420,000</div>
+                </div>
+            </a>
+            <!-- 12 差分信号模块 -->
+            <a href="product-differential-module.html" class="product-card">
+                <img src="images/differential-module.jpg" alt="差分信号模块" class="product-img">
+                <div class="product-info">
+                    <h3>差分信号模块</h3>
+                    <p>高速差動信号変換モジュール。</p>
+                    <div class="product-price">¥55,000</div>
+                </div>
+            </a>
+            <!-- 13 LINUX CNC接口板 -->
+            <a href="product-linuxcnc-interface.html" class="product-card">
+                <img src="images/linuxcnc-interface.jpg" alt="LINUX CNC接口板" class="product-img">
+                <div class="product-info">
+                    <h3>LINUX CNC接口板</h3>
+                    <p>LinuxCNC対応インターフェースボード。</p>
+                    <div class="product-price">¥89,000</div>
+                </div>
+            </a>
+            <!-- 14 信号转换模块 -->
+            <a href="product-signal-converter.html" class="product-card">
+                <img src="images/signal-converter.jpg" alt="信号转换模块" class="product-img">
+                <div class="product-info">
+                    <h3>信号转换模块</h3>
+                    <p>各種信号変換アダプター。</p>
+                    <div class="product-price">¥48,000</div>
+                </div>
+            </a>
+            <!-- 15 高压差分采样模块 -->
+            <a href="product-hv-differential-sampling.html" class="product-card">
+                <img src="images/hv-differential-sampling.jpg" alt="高压差分采样模块" class="product-img">
+                <div class="product-info">
+                    <h3>高压差分采样模块</h3>
+                    <p>高電圧差動サンプリングモジュール。</p>
+                    <div class="product-price">¥125,000</div>
+                </div>
+            </a>
+            <!-- 16 磨刀器 -->
+            <a href="product-tool-grinder.html" class="product-card">
+                <img src="images/tool-grinder.jpg" alt="磨刀器" class="product-img">
+                <div class="product-info">
+                    <h3>磨刀器</h3>
+                    <p>工具研磨機。精密研磨が可能。</p>
+                    <div class="product-price">¥32,000</div>
+                </div>
+            </a>
+            <!-- 17 手动分度头 -->
+            <a href="product-manual-dividing-head.html" class="product-card">
+                <img src="images/manual-dividing-head.jpg" alt="手动分度头" class="product-img">
+                <div class="product-info">
+                    <h3>手动分度头</h3>
+                    <p>手動割出し盤。フライス用。</p>
+                    <div class="product-price">¥78,000</div>
+                </div>
+            </a>
+            <!-- 18 CNC A轴 -->
+            <a href="product-cnc-a-axis.html" class="product-card">
+                <img src="images/cnc-a-axis.jpg" alt="CNC A轴" class="product-img">
+                <div class="product-info">
+                    <h3>CNC A轴</h3>
+                    <p>CNC用A軸（回転軸）ユニット。</p>
+                    <div class="product-price">¥220,000</div>
+                </div>
+            </a>
+            <!-- 19 放电加工深孔加工旋转头 -->
             <a href="product-edm-rotary-head.html" class="product-card">
                 <img src="images/edm-rotary-head.jpg" alt="放电加工深孔加工旋转头" class="product-img">
                 <div class="product-info">
@@ -229,6 +317,7 @@
                     <div class="product-price">¥680,000</div>
                 </div>
             </a>
+            <!-- 20 放电加工手动多角度台 -->
             <a href="product-edm-angle-table.html" class="product-card">
                 <img src="images/edm-angle-table.jpg" alt="放电加工手动多角度台" class="product-img">
                 <div class="product-info">
