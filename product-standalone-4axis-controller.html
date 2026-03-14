@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>桌面激光加工机 | LINSAI</title>
+    <title>脱机4轴控制器 | LINSAI</title>
     <style>
-        /* ===== 全局样式 (保留原有并补充轮播图样式) ===== */
+        /* ===== 全局样式 ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
@@ -123,7 +123,7 @@
             text-decoration:underline;
         }
 
-        /* ===== 新增轮播图样式 ===== */
+        /* ===== 轮播图样式 ===== */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -142,7 +142,7 @@
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 0; /* 容器已有圆角 */
+            border-radius: 0;
             box-shadow: none;
         }
         .carousel-arrow {
@@ -225,48 +225,49 @@
 
     <main class="container">
         <div class="product-detail">
-            <!-- 左侧：轮播图区域 (替换原单张图片) -->
+            <!-- 左侧：轮播图区域 -->
             <div class="product-gallery">
                 <div class="carousel-container" id="carousel">
-                    <!-- 幻灯片列表 (由JS动态生成) -->
                     <div class="carousel-slides" id="carouselSlides"></div>
-                    <!-- 左右箭头 -->
                     <div class="carousel-arrow left" id="prevSlide">&#10094;</div>
                     <div class="carousel-arrow right" id="nextSlide">&#10095;</div>
-                    <!-- 指示点容器 -->
                     <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </div>
 
-            <!-- 右侧：产品信息 (完全保留) -->
+            <!-- 右侧：产品信息 -->
             <div class="product-info">
-                <h1>桌面激光加工机</h1>
-                <p class="product-price-large">¥180,000</p>
+                <h1>脱机4轴控制器</h1>
+                <p class="product-price-large">¥88,000</p>
                 <div class="product-description">
-                    <p>コンパクトなデスクトップ型レーザー加工機。アクリル、木材、皮革、紙などの非金属材料の切断・彫刻が可能です。</p>
-                    <p>初心者でも簡単に使えるソフトウェア付属。教育機関、個人クリエイター、試作開発に最適です。</p>
+                    <p>PC不要、単体でGコードを実行できる脱機型4軸CNCコントローラ。SDカード／USBメモリから加工ファイルを読み込み、液晶画面で操作できます。</p>
+                    <p>小型CNCフライス、レーザー加工機、3Dプリンター、ロボットなど、4軸までのモーション制御が必要なあらゆる機器に組み込み可能です。</p>
                 </div>
 
                 <div class="product-specs">
                     <h2>主な仕様</h2>
                     <table class="spec-table">
-                        <tr><th>レーザー出力</th><td>10W</td></tr>
-                        <tr><th>加工エリア</th><td>300×300 mm</td></tr>
-                        <tr><th>最大加工速度</th><td>200 mm/s</td></tr>
-                        <tr><th>解像度</th><td>1000 DPI</td></tr>
-                        <tr><th>対応ソフト</th><td>LightBurn、RDWorks</td></tr>
-                        <tr><th>寸法</th><td>500×500×200 mm</td></tr>
-                        <tr><th>重量</th><td>10 kg</td></tr>
+                        <tr><th>制御軸数</th><td>4軸（X, Y, Z, A）</td></tr>
+                        <tr><th>出力信号</th><td>ステップ/ディレクション（最大200kHz）</td></tr>
+                        <tr><th>入力信号</th><td>リミット（12点）、非常停止、プローブ、ジョグ</td></tr>
+                        <tr><th>出力信号</th><td>スピンドルPWM、クーラント、リレー出力（2点）</td></tr>
+                        <tr><th>ファイル読み込み</th><td>SDカード（FAT32）、USBホスト</td></tr>
+                        <tr><th>表示</th><td>4.3インチカラー液晶タッチパネル</td></tr>
+                        <tr><th>対応Gコード</th><td>Fanuc互換（一部Mコードカスタマイズ可）</td></tr>
+                        <tr><th>電源</th><td>DC24V 3A</td></tr>
+                        <tr><th>寸法</th><td>160×100×45 mm</td></tr>
                     </table>
                 </div>
 
                 <div class="product-description">
                     <h2>特長</h2>
                     <ul style="margin-left:20px;">
-                        <li>卓上サイズで設置場所を選ばない</li>
-                        <li>エアアシスト標準装備で切断面がきれい</li>
-                        <li>赤色ポインターで加工位置をプレビュー</li>
-                        <li>オプションで回転軸ユニット追加可能（円筒彫刻）</li>
+                        <li>完全脱機運転 – パソコンなしで現場作業が完結</li>
+                        <li>直感的なタッチパネル操作でファイル選択・加工開始がスムーズ</li>
+                        <li>Gコードをリアルタイムプレビュー、加工進捗を確認</li>
+                        <li>4軸同時制御対応、複雑な加工も実現</li>
+                        <li>豊富なI/Oで周辺機器（エアバルブ、警報灯など）を直接制御</li>
+                        <li>パラメータバックアップ機能、機械設定を保存可能</li>
                     </ul>
                 </div>
 
@@ -283,16 +284,15 @@
 
     <script>
         (function() {
-            // ===== 桌面激光加工机 图片配置 =====
-            // 请根据实际图片文件名修改以下数组 (建议命名如 images/desktop-laser-1.jpg, desktop-laser-2.jpg, ...)
+            // ===== 脱机4轴控制器 图片配置 =====
+            // 图片路径格式：images/产品名/产品名-序号.jpg
             const imageList = [
-                'images/laser-machine/laser-machine-1.jpg',   // 第一张图 (产品正面)
-                'images/laser-machine/laser-machine-2.JPG',   // 第二张图 (工作示例)
-                'images/laser-machine/laser-machine-3.JPG',   // 第三张图 (软件界面)
-                'images/laser-machine/laser-machine-4.jpg'    // 第四张图 (加工样品) — 可根据实际数量增减
+                'images/standalone-4axis-controller/standalone-4axis-controller-1.jpg',
+                'images/standalone-4axis-controller/standalone-4axis-controller-2.jpg',
+                'images/standalone-4axis-controller/standalone-4axis-controller-3.jpg',
+                'images/standalone-4axis-controller/standalone-4axis-controller-4.jpg'
             ];
 
-            // 轮播元素
             const slidesContainer = document.getElementById('carouselSlides');
             const dotsContainer = document.getElementById('carouselDots');
             const prevBtn = document.getElementById('prevSlide');
@@ -301,11 +301,10 @@
             let currentIndex = 0;
             let slideCount = imageList.length;
             let autoPlayInterval;
-            const autoPlayDelay = 3000; // 3秒切换
+            const autoPlayDelay = 3000;
 
-            if (slideCount === 0) return; // 没有图片则不初始化
+            if (slideCount === 0) return;
 
-            // 动态生成幻灯片和指示点
             function renderSlidesAndDots() {
                 slidesContainer.innerHTML = '';
                 imageList.forEach((src, index) => {
@@ -313,8 +312,7 @@
                     slideDiv.className = 'carousel-slide';
                     const img = document.createElement('img');
                     img.src = src;
-                    img.alt = `桌面激光加工机 产品图 ${index + 1}`;
-                    // 图片加载失败时显示占位提示 (可选)
+                    img.alt = `脱机4轴控制器 产品图 ${index + 1}`;
                     img.onerror = function() { this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found'; };
                     slideDiv.appendChild(img);
                     slidesContainer.appendChild(slideDiv);
@@ -358,15 +356,13 @@
                 }
             }
 
-            // 初始化
             renderSlidesAndDots();
             goToSlide(0);
             startAutoPlay();
 
-            // 事件监听
             prevBtn.addEventListener('click', function() {
                 prevSlide();
-                stopAutoPlay(); // 点击后暂停自动播放 (可根据需要重新启动)
+                stopAutoPlay();
             });
             nextBtn.addEventListener('click', function() {
                 nextSlide();
