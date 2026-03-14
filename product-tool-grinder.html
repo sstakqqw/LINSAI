@@ -3,37 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOIGOI2 パンチプレス | LINSAI</title>
+    <title>磨刀器 | LINSAI</title>
     <style>
-        /* 样式同上，可复制 */
+        /* ===== 全局样式 (保留原有并补充轮播图样式) ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height:1.7; color:#1a1a1a; background:#fff; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height:1.7;
+            color:#1a1a1a;
+            background:#fff;
+        }
         .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-        header { border-bottom:1px solid #e5e5e5; padding:20px 0; }
-        .header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-        .logo { font-size:1.8rem; font-weight:700; color:#2c3e50; text-decoration:none; }
-        .nav-menu { display:flex; list-style:none; gap:32px; flex-wrap:wrap; }
-        .nav-menu a { text-decoration:none; color:#2c3e50; font-weight:500; }
+        header {
+            border-bottom:1px solid #e5e5e5;
+            padding:20px 0;
+        }
+        .header-inner {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .logo {
+            font-size:1.8rem;
+            font-weight:700;
+            color:#2c3e50;
+            text-decoration:none;
+        }
+        .nav-menu {
+            display:flex;
+            list-style:none;
+            gap:32px;
+            flex-wrap:wrap;
+        }
+        .nav-menu a {
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+        }
         .nav-menu a:hover { color:#c0392b; }
-        .lang-switch { display:flex; gap:8px; }
-        .lang-switch a { text-decoration:none; color:#888; }
-        .lang-switch a.active { color:#1a1a1a; font-weight:500; }
-        footer { border-top:1px solid #eee; padding:30px 0; margin-top:60px; text-align:center; color:#888; }
-        .product-detail { display:flex; gap:50px; margin:50px 0; flex-wrap:wrap; }
-        .product-gallery { flex:1 1 400px; }
-        .product-gallery img { width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
-        .product-info { flex:1 1 500px; }
-        .product-info h1 { font-size:2.4rem; font-weight:500; margin-bottom:20px; }
-        .product-price-large { font-size:2rem; font-weight:600; color:#c0392b; margin-bottom:30px; }
-        .product-description { margin-bottom:30px; }
-        .product-description h2 { font-size:1.5rem; margin:30px 0 15px; border-bottom:2px solid #c0392b; display:inline-block; }
-        .product-specs { background:#f5f5f5; padding:30px; border-radius:12px; margin-top:30px; }
-        .spec-table { width:100%; border-collapse:collapse; }
-        .spec-table th { text-align:left; padding:12px 10px 12px 0; width:150px; font-weight:500; }
-        .spec-table td { padding:12px 0; }
-        .back-link { display:inline-block; margin-top:40px; color:#c0392b; text-decoration:none; font-weight:500; }
-        .back-link:hover { text-decoration:underline; }
-        @media (max-width:768px) { .nav-menu { display:none; } }
+        .lang-switch {
+            display:flex;
+            gap:8px;
+        }
+        .lang-switch a {
+            text-decoration:none;
+            color:#888;
+        }
+        .lang-switch a.active {
+            color:#1a1a1a;
+            font-weight:500;
+        }
+        footer {
+            border-top:1px solid #eee;
+            padding:30px 0;
+            margin-top:60px;
+            text-align:center;
+            color:#888;
+        }
+        .product-detail {
+            display:flex;
+            gap:50px;
+            margin:50px 0;
+            flex-wrap:wrap;
+        }
+        .product-gallery {
+            flex:1 1 400px;
+        }
+        .product-info {
+            flex:1 1 500px;
+        }
+        .product-info h1 {
+            font-size:2.4rem;
+            font-weight:500;
+            margin-bottom:20px;
+        }
+        .product-price-large {
+            font-size:2rem;
+            font-weight:600;
+            color:#c0392b;
+            margin-bottom:30px;
+        }
+        .product-description {
+            margin-bottom:30px;
+        }
+        .product-description h2 {
+            font-size:1.5rem;
+            margin:30px 0 15px;
+            border-bottom:2px solid #c0392b;
+            display:inline-block;
+        }
+        .product-specs {
+            background:#f5f5f5;
+            padding:30px;
+            border-radius:12px;
+            margin-top:30px;
+        }
+        .spec-table {
+            width:100%;
+            border-collapse:collapse;
+        }
+        .spec-table th {
+            text-align:left;
+            padding:12px 10px 12px 0;
+            width:150px;
+            font-weight:500;
+        }
+        .spec-table td {
+            padding:12px 0;
+        }
+        .back-link {
+            display:inline-block;
+            margin-top:40px;
+            color:#c0392b;
+            text-decoration:none;
+            font-weight:500;
+        }
+        .back-link:hover {
+            text-decoration:underline;
+        }
+
+        /* ===== 新增轮播图样式 ===== */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0; /* 容器已有圆角 */
+            box-shadow: none;
+        }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            transition: background 0.2s;
+            z-index: 10;
+            user-select: none;
+        }
+        .carousel-arrow:hover {
+            background: rgba(255,255,255,0.9);
+        }
+        .carousel-arrow.left {
+            left: 15px;
+        }
+        .carousel-arrow.right {
+            right: 15px;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .carousel-dot.active {
+            background: #c0392b;
+        }
+        @media (max-width:768px) {
+            .nav-menu { display:none; }
+            .carousel-arrow {
+                width: 30px;
+                height: 30px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,36 +223,50 @@
         </div>
     </header>
 
-<main>
+    <main class="container"> <!-- 添加container以对齐内容 -->
         <div class="product-detail">
+            <!-- 左侧：轮播图区域 (替换原单张图片) -->
             <div class="product-gallery">
-                <img src="images/tool-grinder.jpg" alt="磨刀器">
+                <div class="carousel-container" id="carousel">
+                    <!-- 幻灯片列表 (由JS动态生成) -->
+                    <div class="carousel-slides" id="carouselSlides"></div>
+                    <!-- 左右箭头 -->
+                    <div class="carousel-arrow left" id="prevSlide">&#10094;</div>
+                    <div class="carousel-arrow right" id="nextSlide">&#10095;</div>
+                    <!-- 指示点容器 -->
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
             </div>
+
+            <!-- 右侧：产品信息 (完全保留) -->
             <div class="product-info">
                 <h1>磨刀器</h1>
                 <p class="product-price-large">¥32,000</p>
                 <div class="product-description">
                     <p>バイト、ドリル、エンドミルなどを手軽に再研磨できる卓上グラインダー。</p>
                 </div>
+
                 <div class="product-specs">
                     <h2>主な仕様</h2>
-                    <table>
+                    <table class="spec-table"> <!-- 增加spec-table类 -->
                         <tr><th>砥石径</th><td>150mm</td></tr>
                         <tr><th>回転数</th><td>2850rpm</td></tr>
                         <tr><th>モーター出力</th><td>250W</td></tr>
                         <tr><th>角度調整範囲</th><td>0～45°</td></tr>
                     </table>
                 </div>
+
                 <div class="product-description">
                     <h2>特長</h2>
-                    <ul>
+                    <ul style="margin-left:20px;"> <!-- 增加左内边距 -->
                         <li>コンパクトで場所を取らない</li>
                         <li>付属のホルダで再現性の高い研磨</li>
                         <li>水研ぎタイプで熱ダレ防止</li>
                         <li>ダイヤモンド砥石オプション</li>
                     </ul>
                 </div>
-                <a href="products.html">← 戻る</a>
+
+                <a href="products.html" class="back-link">← 製品一覧に戻る</a> <!-- 应用back-link类 -->
             </div>
         </div>
     </main>
@@ -95,5 +276,103 @@
             <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        (function() {
+            // ===== 磨刀器 图片配置 =====
+            // 请根据实际图片文件名修改以下数组 (建议命名如 images/tool-grinder-1.jpg, ...)
+            const imageList = [
+                'images/tool-grinder/tool-grinder-1.jpg',   // 第一张图 (产品整体)
+                'images/tool-grinder/tool-grinder-2.jpg',   // 第二张图 (磨刀示例)
+                'images/tool-grinder/tool-grinder-3.jpg',   // 第三张图 (附件)
+                'images/tool-grinder/tool-grinder-4.jpg'    // 第四张图 (应用场景) — 可根据实际数量增减
+            ];
+
+            // 轮播元素
+            const slidesContainer = document.getElementById('carouselSlides');
+            const dotsContainer = document.getElementById('carouselDots');
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            
+            let currentIndex = 0;
+            let slideCount = imageList.length;
+            let autoPlayInterval;
+            const autoPlayDelay = 3000; // 3秒切换
+
+            if (slideCount === 0) return; // 没有图片则不初始化
+
+            // 动态生成幻灯片和指示点
+            function renderSlidesAndDots() {
+                slidesContainer.innerHTML = '';
+                imageList.forEach((src, index) => {
+                    const slideDiv = document.createElement('div');
+                    slideDiv.className = 'carousel-slide';
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = `磨刀器 产品图 ${index + 1}`;
+                    // 图片加载失败时显示占位提示 (可选)
+                    img.onerror = function() { this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found'; };
+                    slideDiv.appendChild(img);
+                    slidesContainer.appendChild(slideDiv);
+                });
+
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i < slideCount; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                    dot.dataset.index = i;
+                    dot.addEventListener('click', function() {
+                        goToSlide(parseInt(this.dataset.index));
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function goToSlide(index) {
+                if (index < 0) index = slideCount - 1;
+                if (index >= slideCount) index = 0;
+                currentIndex = index;
+                slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                const dots = document.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            function nextSlide() { goToSlide(currentIndex + 1); }
+            function prevSlide() { goToSlide(currentIndex - 1); }
+
+            function startAutoPlay() {
+                stopAutoPlay();
+                autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+            }
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = null;
+                }
+            }
+
+            // 初始化
+            renderSlidesAndDots();
+            goToSlide(0);
+            startAutoPlay();
+
+            // 事件监听
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+                stopAutoPlay(); // 点击后暂停自动播放 (可根据需要重新启动)
+            });
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+                stopAutoPlay();
+            });
+
+            const carousel = document.getElementById('carousel');
+            carousel.addEventListener('mouseenter', stopAutoPlay);
+            carousel.addEventListener('mouseleave', startAutoPlay);
+        })();
+    </script>
 </body>
 </html>
