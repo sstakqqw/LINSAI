@@ -3,37 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KitMill S100 | LINSAI</title>
+    <title>桌面激光加工机 | LINSAI</title>
     <style>
-        /* 样式同上，可复制 */
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height:1.7; color:#1a1a1a; background:#fff; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height:1.7;
+            color:#1a1a1a;
+            background:#fff;
+        }
         .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-        header { border-bottom:1px solid #e5e5e5; padding:20px 0; }
-        .header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-        .logo { font-size:1.8rem; font-weight:700; color:#2c3e50; text-decoration:none; }
-        .nav-menu { display:flex; list-style:none; gap:32px; flex-wrap:wrap; }
-        .nav-menu a { text-decoration:none; color:#2c3e50; font-weight:500; }
+        header {
+            border-bottom:1px solid #e5e5e5;
+            padding:20px 0;
+        }
+        .header-inner {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .logo {
+            font-size:1.8rem;
+            font-weight:700;
+            color:#2c3e50;
+            text-decoration:none;
+        }
+        .nav-menu {
+            display:flex;
+            list-style:none;
+            gap:32px;
+            flex-wrap:wrap;
+        }
+        .nav-menu a {
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+        }
         .nav-menu a:hover { color:#c0392b; }
-        .lang-switch { display:flex; gap:8px; }
-        .lang-switch a { text-decoration:none; color:#888; }
-        .lang-switch a.active { color:#1a1a1a; font-weight:500; }
-        footer { border-top:1px solid #eee; padding:30px 0; margin-top:60px; text-align:center; color:#888; }
-        .product-detail { display:flex; gap:50px; margin:50px 0; flex-wrap:wrap; }
-        .product-gallery { flex:1 1 400px; }
-        .product-gallery img { width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
-        .product-info { flex:1 1 500px; }
-        .product-info h1 { font-size:2.4rem; font-weight:500; margin-bottom:20px; }
-        .product-price-large { font-size:2rem; font-weight:600; color:#c0392b; margin-bottom:30px; }
-        .product-description { margin-bottom:30px; }
-        .product-description h2 { font-size:1.5rem; margin:30px 0 15px; border-bottom:2px solid #c0392b; display:inline-block; }
-        .product-specs { background:#f5f5f5; padding:30px; border-radius:12px; margin-top:30px; }
-        .spec-table { width:100%; border-collapse:collapse; }
-        .spec-table th { text-align:left; padding:12px 10px 12px 0; width:150px; font-weight:500; }
-        .spec-table td { padding:12px 0; }
-        .back-link { display:inline-block; margin-top:40px; color:#c0392b; text-decoration:none; font-weight:500; }
-        .back-link:hover { text-decoration:underline; }
-        @media (max-width:768px) { .nav-menu { display:none; } }
+        .lang-switch {
+            display:flex;
+            gap:8px;
+        }
+        .lang-switch a {
+            text-decoration:none;
+            color:#888;
+        }
+        .lang-switch a.active {
+            color:#1a1a1a;
+            font-weight:500;
+        }
+        footer {
+            border-top:1px solid #eee;
+            padding:30px 0;
+            margin-top:60px;
+            text-align:center;
+            color:#888;
+        }
+        .product-detail {
+            display:flex;
+            gap:50px;
+            margin:50px 0;
+            flex-wrap:wrap;
+        }
+        .product-gallery {
+            flex:1 1 400px;
+        }
+        .product-gallery img {
+            width:100%;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        }
+        .product-info {
+            flex:1 1 500px;
+        }
+        .product-info h1 {
+            font-size:2.4rem;
+            font-weight:500;
+            margin-bottom:20px;
+        }
+        .product-price-large {
+            font-size:2rem;
+            font-weight:600;
+            color:#c0392b;
+            margin-bottom:30px;
+        }
+        .product-description {
+            margin-bottom:30px;
+        }
+        .product-description h2 {
+            font-size:1.5rem;
+            margin:30px 0 15px;
+            border-bottom:2px solid #c0392b;
+            display:inline-block;
+        }
+        .product-specs {
+            background:#f5f5f5;
+            padding:30px;
+            border-radius:12px;
+            margin-top:30px;
+        }
+        .spec-table {
+            width:100%;
+            border-collapse:collapse;
+        }
+        .spec-table th {
+            text-align:left;
+            padding:12px 10px 12px 0;
+            width:150px;
+            font-weight:500;
+        }
+        .spec-table td {
+            padding:12px 0;
+        }
+        .back-link {
+            display:inline-block;
+            margin-top:40px;
+            color:#c0392b;
+            text-decoration:none;
+            font-weight:500;
+        }
+        .back-link:hover {
+            text-decoration:underline;
+        }
+        @media (max-width:768px) {
+            .nav-menu { display:none; }
+        }
     </style>
 </head>
 <body>
@@ -59,32 +154,35 @@
     <main class="container">
         <div class="product-detail">
             <div class="product-gallery">
-                <img src="images/kitmill-s100.jpg" alt="KitMill S100">
+                <img src="images/kitmill-s100.jpg" alt="桌面激光加工机">
             </div>
             <div class="product-info">
-                <h1>KitMill S100</h1>
-                <p class="product-price-large">¥480,000</p>
+                <h1>桌面激光加工机</h1>
+                <p class="product-price-large">¥180,000</p>
                 <div class="product-description">
-                    <p>教育機関や個人クリエイター向けの卓上CNCフライスです。コンパクトながらスチールの加工も可能な本格派。</p>
-                    <p>PCと接続し、付属のCAMソフトウェアで簡単に加工パスを生成できます。</p>
+                    <p>コンパクトなデスクトップ型レーザー加工機。アクリル、木材、皮革、紙などの非金属材料の切断・彫刻が可能です。</p>
+                    <p>初心者でも簡単に使えるソフトウェア付属。教育機関、個人クリエイター、試作開発に最適です。</p>
                 </div>
                 <div class="product-specs">
                     <h2>主な仕様</h2>
                     <table class="spec-table">
-                        <tr><th>加工可能材質</th><td>木材、樹脂、アルミ、真鍮、軟鋼</td></tr>
-                        <tr><th>テーブルサイズ</th><td>200×150 mm</td></tr>
-                        <tr><th>ストローク</th><td>160×120×80 mm</td></tr>
-                        <tr><th>主軸モーター</th><td>300W</td></tr>
-                        <tr><th>回転数</th><td>5,000～12,000 rpm</td></tr>
+                        <tr><th>レーザー出力</th><td>10W</td></tr>
+                        <tr><th>加工エリア</th><td>300×300 mm</td></tr>
+                        <tr><th>最大加工速度</th><td>200 mm/s</td></tr>
+                        <tr><th>解像度</th><td>1000 DPI</td></tr>
+                        <tr><th>対応ソフト</th><td>LightBurn、RDWorks</td></tr>
+                        <tr><th>寸法</th><td>500×500×200 mm</td></tr>
+                        <tr><th>重量</th><td>10 kg</td></tr>
                     </table>
                 </div>
                 <div class="product-description">
                     <h2>特長</h2>
                     <ul style="margin-left:20px;">
-                        <li>学校の授業やロボット部の活動に最適</li>
-                        <li>安全カバー付きで初心者も安心</li>
-                        <li>豊富な教育用教材・カリキュラム対応</li>
-                        <li>オプションで4軸拡張キットあり</li>
+                        <li>卓上サイズで設置場所を選ばない</li>
+                        <li>エアアシスト標準装備で切断面がきれい</li>
+                        <li>赤色ポインターで加工位置をプレビュー</li>
+                        
+                        <li>オプションで回転軸ユニット追加可能（円筒彫刻）</li>
                     </ul>
                 </div>
                 <a href="products.html" class="back-link">← 製品一覧に戻る</a>
