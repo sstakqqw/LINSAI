@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wire EDM Starter Kit | LINSAI</title>
+    <title>卓上ワイヤカット放電加工機 | LINSAI</title>
     <style>
         /* ===== 全局样式 (保留原有) ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -123,7 +123,7 @@
             text-decoration:underline;
         }
 
-        /* ===== 新增轮播图样式 ===== */
+        /* ===== 轮播图样式 ===== */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -142,7 +142,7 @@
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 0; /* 容器已有圆角 */
+            border-radius: 0;
             box-shadow: none;
         }
         .carousel-arrow {
@@ -225,46 +225,47 @@
 
     <main class="container">
         <div class="product-detail">
-            <!-- 左侧：轮播图区域 (替换原单张图片) -->
+            <!-- 左侧：轮播图区域 -->
             <div class="product-gallery">
                 <div class="carousel-container" id="carousel">
-                    <!-- 幻灯片列表 (由JS动态生成) -->
                     <div class="carousel-slides" id="carouselSlides"></div>
-                    <!-- 左右箭头 -->
                     <div class="carousel-arrow left" id="prevSlide">&#10094;</div>
                     <div class="carousel-arrow right" id="nextSlide">&#10095;</div>
-                    <!-- 指示点容器 -->
                     <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </div>
 
-            <!-- 右侧：产品信息 (完全保留) -->
+            <!-- 右侧：产品信息 (基于参考链接内容重构) -->
             <div class="product-info">
-                <h1>Wire EDM Starter Kit</h1>
-                <p class="product-price-large">¥9,532,000</p>
+                <h1>卓上ワイヤカット放電加工機</h1>
+                <p class="product-price-large">¥780,000</p> <!-- 参考小型设备价格设定 -->
                 <div class="product-description">
-                    <p>ワイヤー放電加工機の導入に必要な基本機器をセットにしたスターターキットです。</p>
-                    <p>本体、電源、加工液循環装置、標準工具が含まれており、すぐに加工を始められます。</p>
+                    <p>細いワイヤに電流を流し、糸鋸のように金属素材を切断する卓上型のワイヤカット放電加工機です。小型CNCフライスでは加工が困難な厚板材や、鉄・アルミなどの硬い金属も高精度に切断可能。導電性材料であれば材料を選ばず、酸化被膜を持つアルミ材でも美しい切断面が得られます。</p>
+                    <p>装置の大部分は市販品、または小型CNCフライスや3Dプリンターで製作した部品で構成されており、メンテナンスが容易です。加工速度は遅いものの動作音が小さく、長時間の無人運転にも適しています。</p>
                 </div>
 
                 <div class="product-specs">
-                    <h2>主な仕様</h2>
+                    <h2>機械仕様</h2>
                     <table class="spec-table">
-                        <tr><th>加工可能厚さ</th><td>最大100mm</td></tr>
-                        <tr><th>テーブルストローク</th><td>350×250 mm</td></tr>
-                        <tr><th>使用ワイヤ径</th><td>0.1～0.3mm</td></tr>
-                        <tr><th>電源</th><td>三相200V / 単相100V（切替可）</td></tr>
-                        <tr><th>設置面積</th><td>2,000×1,800 mm</td></tr>
+                        <tr><th>加工ストローク</th><td>200 × 300 mm</td></tr>
+                        <tr><th>最大加工厚み</th><td>120 mm</td></tr>
+                        <tr><th>使用ワイヤ径</th><td>0.1 ～ 0.3 mm</td></tr>
+                        <tr><th>電源</th><td>単相100V (高出力パルス回路内蔵)</td></tr>
+                        <tr><th>ワイヤ張力機構</th><td>定張力制御付き</td></tr>
+                        <tr><th>本体寸法</th><td>約 500×500×400 mm</td></tr>
+                        <tr><th>質量</th><td>約 50 kg</td></tr>
                     </table>
                 </div>
 
                 <div class="product-description">
                     <h2>特長</h2>
                     <ul style="margin-left:20px;">
-                        <li>導入後すぐに稼働可能なオールインワン</li>
-                        <li>コンパクト設計で省スペース</li>
-                        <li>操作が簡単な初心者向けコントローラー</li>
-                        <li>保守サポート付き</li>
+                        <li><strong>厚板・硬質材料に対応</strong> – 鉄やアルミなど、小型フライスでは難しい素材もワイヤ放電で正確に切断。</li>
+                        <li><strong>アルミ加工に強い</strong> – 酸化被膜の影響を受けにくい高出力パルス回路と厳密な条件設定により、アルミの厚板も断面きれいに加工可能。</li>
+                        <li><strong>静音設計</strong> – 加工音が小さく、夜間や住宅地でも長時間運転できる。</li>
+                        <li><strong>DIYメンテナンス</strong> – 市販品や3Dプリンタ部品を多用しているため、故障時もユーザー自身で修理・交換が容易。</li>
+                        <li><strong>定張力ワイヤ制御</strong> – ワイヤ切れを防ぎ、安定した加工を実現。</li>
+                        <li><strong>卓上サイズ</strong> – 一般的な作業台に設置可能で、スペースを取らない。</li>
                     </ul>
                 </div>
 
@@ -281,7 +282,7 @@
 
     <script>
         (function() {
-            // ===== Wire EDM Starter Kit 图片配置 =====
+            // ===== 卓上ワイヤカット放電加工機 图片配置 =====
             // 图片路径格式：images/产品名/产品名-序号.jpg
             const imageList = [
                 'images/wire-edm-starter/wire-edm-starter-1.jpg',
@@ -294,7 +295,6 @@
                 'images/wire-edm-starter/wire-edm-starter-8.jpg'
             ];
 
-            // 轮播元素
             const slidesContainer = document.getElementById('carouselSlides');
             const dotsContainer = document.getElementById('carouselDots');
             const prevBtn = document.getElementById('prevSlide');
@@ -303,11 +303,10 @@
             let currentIndex = 0;
             let slideCount = imageList.length;
             let autoPlayInterval;
-            const autoPlayDelay = 3000; // 3秒切换
+            const autoPlayDelay = 3000;
 
-            if (slideCount === 0) return; // 没有图片则不初始化
+            if (slideCount === 0) return;
 
-            // 动态生成幻灯片和指示点
             function renderSlidesAndDots() {
                 slidesContainer.innerHTML = '';
                 imageList.forEach((src, index) => {
@@ -315,8 +314,7 @@
                     slideDiv.className = 'carousel-slide';
                     const img = document.createElement('img');
                     img.src = src;
-                    img.alt = `Wire EDM Starter Kit 产品图 ${index + 1}`;
-                    // 图片加载失败时显示占位提示 (可选)
+                    img.alt = `卓上ワイヤカット放電加工機 产品图 ${index + 1}`;
                     img.onerror = function() { this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found'; };
                     slideDiv.appendChild(img);
                     slidesContainer.appendChild(slideDiv);
@@ -360,15 +358,13 @@
                 }
             }
 
-            // 初始化
             renderSlidesAndDots();
             goToSlide(0);
             startAutoPlay();
 
-            // 事件监听
             prevBtn.addEventListener('click', function() {
                 prevSlide();
-                stopAutoPlay(); // 点击后暂停自动播放 (可根据需要重新启动)
+                stopAutoPlay();
             });
             nextBtn.addEventListener('click', function() {
                 nextSlide();
