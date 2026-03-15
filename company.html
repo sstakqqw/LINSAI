@@ -3,204 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タップ除去工具 小型放電加工 | LINSAI</title>
+    <title>企業情報 | LINSAI</title>
     <style>
-        /* ===== 全局样式 (保留原有) ===== */
+        /* 全局样式与首页一致 */
         * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            line-height:1.7;
-            color:#1a1a1a;
-            background:#fff;
-        }
+        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height:1.7; color:#1a1a1a; background:#fff; }
         .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-        header {
-            border-bottom:1px solid #e5e5e5;
-            padding:20px 0;
-        }
-        .header-inner {
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            flex-wrap:wrap;
-        }
-        .logo {
-            font-size:1.8rem;
-            font-weight:700;
-            color:#2c3e50;
-            text-decoration:none;
-        }
-        .nav-menu {
-            display:flex;
-            list-style:none;
-            gap:32px;
-            flex-wrap:wrap;
-        }
-        .nav-menu a {
-            text-decoration:none;
-            color:#2c3e50;
-            font-weight:500;
-        }
+        header { border-bottom:1px solid #e5e5e5; padding:20px 0; }
+        .header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+        .logo { font-size:1.8rem; font-weight:700; letter-spacing:1px; color:#2c3e50; text-decoration:none; }
+        .nav-menu { display:flex; list-style:none; gap:32px; flex-wrap:wrap; }
+        .nav-menu a { text-decoration:none; color:#2c3e50; font-weight:500; font-size:0.95rem; }
         .nav-menu a:hover { color:#c0392b; }
-        .lang-switch {
-            display:flex;
-            gap:8px;
-        }
-        .lang-switch a {
-            text-decoration:none;
-            color:#888;
-        }
-        .lang-switch a.active {
-            color:#1a1a1a;
-            font-weight:500;
-        }
-        footer {
-            border-top:1px solid #eee;
-            padding:30px 0;
-            margin-top:60px;
-            text-align:center;
-            color:#888;
-        }
-        .product-detail {
-            display:flex;
-            gap:50px;
-            margin:50px 0;
-            flex-wrap:wrap;
-        }
-        .product-gallery {
-            flex:1 1 400px;
-        }
-        .product-info {
-            flex:1 1 500px;
-        }
-        .product-info h1 {
-            font-size:2.4rem;
-            font-weight:500;
-            margin-bottom:20px;
-        }
-        .product-price-large {
-            font-size:2rem;
-            font-weight:600;
-            color:#c0392b;
-            margin-bottom:30px;
-        }
-        .product-description {
-            margin-bottom:30px;
-        }
-        .product-description h2 {
-            font-size:1.5rem;
-            margin:30px 0 15px;
-            border-bottom:2px solid #c0392b;
-            display:inline-block;
-        }
-        .product-specs {
-            background:#f5f5f5;
-            padding:30px;
-            border-radius:12px;
-            margin-top:30px;
-        }
-        .spec-table {
-            width:100%;
-            border-collapse:collapse;
-        }
-        .spec-table th {
-            text-align:left;
-            padding:12px 10px 12px 0;
-            width:150px;
-            font-weight:500;
-        }
-        .spec-table td {
-            padding:12px 0;
-        }
-        .back-link {
-            display:inline-block;
-            margin-top:40px;
-            color:#c0392b;
-            text-decoration:none;
-            font-weight:500;
-        }
-        .back-link:hover {
-            text-decoration:underline;
-        }
-
-        /* ===== 轮播图样式 ===== */
-        .carousel-container {
-            position: relative;
+        .lang-switch { display:flex; gap:8px; font-size:0.9rem; }
+        .lang-switch a { text-decoration:none; color:#888; }
+        .lang-switch a.active { color:#1a1a1a; font-weight:500; }
+        footer { border-top:1px solid #eee; padding:30px 0; margin-top:60px; text-align:center; color:#888; }
+        /* 页面特有样式 */
+        .page-title { background:#f9f9f9; padding:60px 0 20px; text-align:center; margin-bottom:50px; }
+        .page-title h1 { font-size:2.4rem; font-weight:500; }
+        .info-table { width:100%; border-collapse: collapse; margin:40px 0; }
+        .info-table th { background:#f5f5f5; padding:15px; border:1px solid #ddd; text-align:left; width:150px; }
+        .info-table td { padding:15px; border:1px solid #ddd; }
+        /* 地图容器样式：去掉flex背景，保留圆角和高度 */
+        .map-container {
             width: 100%;
+            height: 350px;
             border-radius: 12px;
             overflow: hidden;
+            margin: 30px 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .carousel-slide {
-            flex: 0 0 100%;
-        }
-        .carousel-slide img {
+        .map-container iframe {
             width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 0;
-            box-shadow: none;
+            height: 100%;
+            border: 0;
         }
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.7);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            transition: background 0.2s;
-            z-index: 10;
-            user-select: none;
-        }
-        .carousel-arrow:hover {
-            background: rgba(255,255,255,0.9);
-        }
-        .carousel-arrow.left {
-            left: 15px;
-        }
-        .carousel-arrow.right {
-            right: 15px;
-        }
-        .carousel-dots {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
-        }
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.5);
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .carousel-dot.active {
-            background: #c0392b;
-        }
-        @media (max-width:768px) {
-            .nav-menu { display:none; }
-            .carousel-arrow {
-                width: 30px;
-                height: 30px;
-                font-size: 18px;
-            }
-        }
+        @media (max-width:768px) { .nav-menu { display:none; } }
     </style>
 </head>
 <body>
@@ -223,53 +62,37 @@
         </div>
     </header>
 
-    <main class="container">
-        <div class="product-detail">
-            <!-- 左侧：轮播图区域 -->
-            <div class="product-gallery">
-                <div class="carousel-container" id="carousel">
-                    <div class="carousel-slides" id="carouselSlides"></div>
-                    <div class="carousel-arrow left" id="prevSlide">&#10094;</div>
-                    <div class="carousel-arrow right" id="nextSlide">&#10095;</div>
-                    <div class="carousel-dots" id="carouselDots"></div>
-                </div>
-            </div>
-
-            <!-- 右侧：产品信息 -->
-            <div class="product-info">
-                <h1>タップ除去工具 小型放電加工</h1>
-                <p class="product-price-large">¥298,000</p> <!-- 暂定价格，可根据实际调整 -->
-                <div class="product-description">
-                    <p>ねじ切り中に折れて詰まったタップを、放電加工の原理で確実に除去する専用工具です。金属・プラスチックを問わず、破損タップのみを溶解・除去し、母材を傷つけません。建設業・加工業・電子機器産業など、幅広い分野で部品の再利用と作業効率向上に貢献します。</p>
-                    <p>小型・軽量設計で現場での持ち運びも容易。電極は消耗品ですが、一般的なタップサイズに対応する汎用性の高さが特長です。</p>
-                </div>
-
-                <div class="product-specs">
-                    <h2>主な仕様</h2>
-                    <table class="spec-table">
-                        <tr><th>対応タップサイズ</th><td>M2 ～ M12（標準） / オプションでM20まで対応可能</td></tr>
-                        <tr><th>加工深さ</th><td>最大100mm</td></tr>
-                        <tr><th>電源</th><td>AC100V または DC24V（バッテリー駆動モデルあり）</td></tr>
-                        <tr><th>加工方式</th><td>放電加工（EDM）</td></tr>
-                        <tr><th>寸法</th><td>220×150×300 mm（本体）</td></tr>
-                        <tr><th>重量</th><td>4.5kg</td></tr>
-                    </table>
-                </div>
-
-                <div class="product-description">
-                    <h2>特長</h2>
-                    <ul style="margin-left:20px;">
-                        <li><strong>母材を傷つけない</strong> – 破損タップのみを放電で除去。周囲のねじ山や部品を保護します。</li>
-                        <li><strong>小型・可搬</strong> – 現場に持ち込んでその場で加工可能。大型設備が不要です。</li>
-                        <li><strong>幅広い材料に対応</strong> – 鉄・ステンレス・アルミ・真鍮など、導電性材料のタップ除去が可能。</li>
-                        <li><strong>簡単操作</strong> – 電極をセットし、スイッチを入れるだけ。特別な技術は必要ありません。</li>
-                        <li><strong>エコノミー</strong> – 部品を廃棄せずに済むため、コスト削減と資源節約に貢献。</li>
-                    </ul>
-                </div>
-
-                <a href="products.html" class="back-link">← 製品一覧に戻る</a>
-            </div>
+    <div class="page-title">
+        <div class="container">
+            <h1>企業情報</h1>
         </div>
+    </div>
+
+    <main class="container">
+        <table class="info-table">
+            <tr><th>会社名</th><td>株式会社LINSAI（リンサイ）</td></tr>
+            <tr><th>設立</th><td>2016年10月</td></tr>
+            <tr><th>資本金</th><td>500万円</td></tr>
+            <tr><th>代表者</th><td>代表取締役  林</td></tr>
+            <tr><th>所在地</th><td>〒114-0023 東京都北区滝野川3-37-3</td></tr>
+            <tr><th>事業内容</th><td>精密工作機械の開発・販売、FA部品のリユース販売</td></tr>
+            <tr><th>取引銀行</th><td>みずほ銀行 王子支店</td></tr>
+        </table>
+
+        <h2 style="font-size:1.8rem; margin:60px 0 30px;">アクセスマップ</h2>
+        
+        <!-- Google Maps 嵌入（请替换 YOUR_API_KEY 为您的实际API密钥） -->
+        <div class="map-container">
+         <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.843636406312!2d139.7260691152581!3d35.75239228017325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601892bb3d6b3b0b%3A0xf3e2a9b7a0f0a0!2z44CSMTE0LTAwMjMg5p2x5Lqs6YO95YyX5Yy66I2S6YeO5bed77yT5LiB55uu77yT4oiS77yT!5e0!3m2!1sja!2sjp!4v1678901234567!5m2!1sja!2sjp" 
+        allowfullscreen="" 
+        loading="lazy">
+         </iframe>
+        </div>
+        <p style="margin-bottom:40px;">JR王子駅より徒歩20分 / 都営三田線 西巣鴨駅より徒歩6分</p>
+        
+        <!-- 备用说明：如果您没有Google Maps API密钥，请访问以下链接获取官方嵌入代码：
+             https://www.google.com/maps/place/〒114-0023+東京都北区滝野川3丁目37-3/ -->
     </main>
 
     <footer>
@@ -277,98 +100,5 @@
             <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        (function() {
-            // ===== タップ除去工具 小型放電加工 图片配置 =====
-            // 图片路径格式：images/产品名/产品名-序号.jpg
-            const imageList = [
-                'images/tap-removal-edm/tap-removal-edm-1.jpg',
-                'images/tap-removal-edm/tap-removal-edm-2.jpg',
-                'images/tap-removal-edm/tap-removal-edm-3.jpg',
-                'images/tap-removal-edm/tap-removal-edm-4.jpg'
-            ];
-
-            const slidesContainer = document.getElementById('carouselSlides');
-            const dotsContainer = document.getElementById('carouselDots');
-            const prevBtn = document.getElementById('prevSlide');
-            const nextBtn = document.getElementById('nextSlide');
-            
-            let currentIndex = 0;
-            let slideCount = imageList.length;
-            let autoPlayInterval;
-            const autoPlayDelay = 3000;
-
-            if (slideCount === 0) return;
-
-            function renderSlidesAndDots() {
-                slidesContainer.innerHTML = '';
-                imageList.forEach((src, index) => {
-                    const slideDiv = document.createElement('div');
-                    slideDiv.className = 'carousel-slide';
-                    const img = document.createElement('img');
-                    img.src = src;
-                    img.alt = `タップ除去工具 产品图 ${index + 1}`;
-                    img.onerror = function() { this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found'; };
-                    slideDiv.appendChild(img);
-                    slidesContainer.appendChild(slideDiv);
-                });
-
-                dotsContainer.innerHTML = '';
-                for (let i = 0; i < slideCount; i++) {
-                    const dot = document.createElement('span');
-                    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-                    dot.dataset.index = i;
-                    dot.addEventListener('click', function() {
-                        goToSlide(parseInt(this.dataset.index));
-                    });
-                    dotsContainer.appendChild(dot);
-                }
-            }
-
-            function goToSlide(index) {
-                if (index < 0) index = slideCount - 1;
-                if (index >= slideCount) index = 0;
-                currentIndex = index;
-                slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-                
-                const dots = document.querySelectorAll('.carousel-dot');
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === currentIndex);
-                });
-            }
-
-            function nextSlide() { goToSlide(currentIndex + 1); }
-            function prevSlide() { goToSlide(currentIndex - 1); }
-
-            function startAutoPlay() {
-                stopAutoPlay();
-                autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
-            }
-            function stopAutoPlay() {
-                if (autoPlayInterval) {
-                    clearInterval(autoPlayInterval);
-                    autoPlayInterval = null;
-                }
-            }
-
-            renderSlidesAndDots();
-            goToSlide(0);
-            startAutoPlay();
-
-            prevBtn.addEventListener('click', function() {
-                prevSlide();
-                stopAutoPlay();
-            });
-            nextBtn.addEventListener('click', function() {
-                nextSlide();
-                stopAutoPlay();
-            });
-
-            const carousel = document.getElementById('carousel');
-            carousel.addEventListener('mouseenter', stopAutoPlay);
-            carousel.addEventListener('mouseleave', startAutoPlay);
-        })();
-    </script>
 </body>
 </html>
