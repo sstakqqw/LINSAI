@@ -81,15 +81,18 @@
 
         <h2 style="font-size:1.8rem; margin:60px 0 30px;">アクセスマップ</h2>
         
-        <!-- Google Maps Embed API (使用用户提供的密钥) -->
+        <!-- Google Maps Embed API - 使用用户提供的经纬度精确定位 -->
         <div class="map-container">
             <iframe 
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxVXXqFYjQKlRaiC-5ZnoIANtCDG-8CnM&q=東京都北区滝野川3-37-3&language=ja" 
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxVXXqFYjQKlRaiC-5ZnoIANtCDG-8CnM&q=35.74778314242535,139.72833624986524&language=ja&zoom=18" 
                 allowfullscreen 
                 loading="lazy">
             </iframe>
         </div>
-        <p style="margin-bottom:40px;">JR王子駅より徒歩20分 / 都営三田線 西巣鴨駅より徒歩6分</p>
+        <p style="margin-bottom:40px;">
+            JR王子駅より徒歩20分 / 都営三田線 西巣鴨駅より徒歩6分<br>
+            ※マーカーが表示されている場所が当社ビルです
+        </p>
         
         <!-- 注意：请确保该API密钥已启用Maps Embed API，并设置适当的HTTP referrer限制（如*.yourdomain.com）以保护密钥安全 -->
     </main>
