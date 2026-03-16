@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>产品名 | LINSAI</title>
+    <title>Powercore V3 (EDM電源) | LINSAI</title>
     <style>
-        /* ===== 全局样式 (与之前保持一致) ===== */
+        /* ===== 全局样式 ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
@@ -123,7 +123,7 @@
             text-decoration:underline;
         }
         
-        /* ===== 新增：轮播图样式 ===== */
+        /* ===== 轮播图样式 ===== */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -142,8 +142,8 @@
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 0;
         }
-        /* 左右箭头 */
         .carousel-arrow {
             position: absolute;
             top: 50%;
@@ -172,7 +172,6 @@
         .carousel-arrow.right {
             right: 15px;
         }
-        /* 指示点 */
         .carousel-dots {
             position: absolute;
             bottom: 15px;
@@ -193,7 +192,14 @@
         .carousel-dot.active {
             background: #c0392b;
         }
-        /* 悬停时暂停自动播放（通过JS实现，样式无需特别处理） */
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px 18px;
+            margin: 20px 0;
+            border-radius: 6px;
+            color: #856404;
+        }
         @media (max-width:768px) {
             .nav-menu { display:none; }
             .carousel-arrow {
@@ -229,43 +235,54 @@
             <!-- 左侧：轮播图区域 -->
             <div class="product-gallery">
                 <div class="carousel-container" id="carousel">
-                    <!-- 幻灯片列表 -->
-                    <div class="carousel-slides" id="carouselSlides">
-                        <!-- 图片由JS动态生成，便于维护 -->
-                    </div>
-                    <!-- 左右箭头 -->
+                    <div class="carousel-slides" id="carouselSlides"></div>
                     <div class="carousel-arrow left" id="prevSlide">&#10094;</div>
                     <div class="carousel-arrow right" id="nextSlide">&#10095;</div>
-                    <!-- 指示点容器 -->
                     <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </div>
 
-            <!-- 右侧：产品信息 -->
+            <!-- 右侧：产品信息 (基于 rackrobo.io 官网内容重构) -->
             <div class="product-info">
-                <h1>Powercore V3</h1>  <!-- 请替换为实际产品名 -->
-                <p class="product-price-large">¥7,944,000</p>  <!-- 请替换价格 -->
+                <h1>Powercore V3 (EDM電源)</h1>
+                <p class="product-price-large">$7,948</p>
                 <div class="product-description">
-                    <p>这里是产品的详细描述。您可以根据实际产品替换文字。</p>
-                    <p>第二段描述。所有内容均可自由修改。</p>
+                    <p>世界で最も手頃で、ハッキング可能、かつ使いやすいオープンソースのEDM電源です。Powercore V2から完全に再設計され、効率、出力、パルス速度、電流センシング、安全性が大幅に向上しました。</p>
+                    <p><strong>ワイヤーEDM用に最適化</strong>されており、自宅でアルミ、スチール、チタンなどから非常に耐久性の高い精密部品を製作できます。Rack RoboticsのBetta WireやWire Toolとの統合を前提に設計されていますが、独自の加工機を設計するためのハッキングも可能です。</p>
                 </div>
 
                 <div class="product-specs">
                     <h2>主な仕様</h2>
                     <table class="spec-table">
-                        <tr><th>項目1</th><td>値1</td></tr>
-                        <tr><th>項目2</th><td>値2</td></tr>
-                        <tr><th>項目3</th><td>値3</td></tr>
-                        <!-- 根据需要增删行 -->
+                        <tr><th>EDM出力</th><td>最大350W</td></tr>
+                        <tr><th>最大パルス周波数</th><td>10 kHz</td></tr>
+                        <tr><th>入力電源</th><td>外部48V電源（別売）が必要</td></tr>
+                        <tr><th>制御方式</th><td>オープンソース ハードウェア/ソフトウェア</td></tr>
+                        <tr><th>テレメトリ</th><td>リアルタイム電流センシング</td></tr>
+                        <tr><th>安全機能</th><td>外部PSUイネーブル機能</td></tr>
                     </table>
+                </div>
+
+                <div class="product-description">
+                    <h2>パッケージ内容</h2>
+                    <ul style="margin-left:20px;">
+                        <li>Powercore V3 本体</li>
+                        <li>アクセサリーケーブル</li>
+                    </ul>
+                    <div class="note">
+                        <strong>ご注意：</strong> 動作には別売の48V電源が必要です。
+                    </div>
                 </div>
 
                 <div class="product-description">
                     <h2>特長</h2>
                     <ul style="margin-left:20px;">
-                        <li>特長1</li>
-                        <li>特長2</li>
-                        <li>特長3</li>
+                        <li><strong>ワイヤーEDM最適化</strong> – アルミ、鋼、チタンなどの精密加工に対応。</li>
+                        <li><strong>オープンソース</strong> – ハードウェアとソフトウェアが公開されており、ユーザー独自のカスタマイズや実験が可能。</li>
+                        <li><strong>高効率・高出力</strong> – 最大350WのEDM出力と10kHzのパルス周波数で、高速かつ精密な放電加工を実現。</li>
+                        <li><strong>リアルタイム電流センシング</strong> – 加工状態を正確に監視し、安定した放電を維持。</li>
+                        <li><strong>安全性</strong> – 外部電源を制御するイネーブル機能により、安全な運用が可能。</li>
+                        <li><strong>即納体制</strong> – 生産開始済み。ご注文後2～4週間で出荷。</li>
                     </ul>
                 </div>
 
@@ -282,16 +299,14 @@
 
     <script>
         (function() {
-            // ===== 图片配置 =====
+            // ===== Powercore V3 图片配置 (统一格式) =====
             const imageList = [
-                'images/powercore-v3-1.jpg',   // 第一张图
-                'images/powercore-v3-2.jpg',   // 第二张图
-                'images/powercore-v3-3.jpg',   // 第三张图
-                'images/powercore-v3-4.jpg'    // 第四张图（可根据实际数量增减）
+                'images/powercore-v3/powercore-v3-1.jpg',
+                'images/powercore-v3/powercore-v3-2.jpg',
+                'images/powercore-v3/powercore-v3-3.jpg',
+                'images/powercore-v3/powercore-v3-4.jpg'
             ];
-            // 提示：请将以上图片路径替换为您实际的文件名
 
-            // 轮播元素
             const slidesContainer = document.getElementById('carouselSlides');
             const dotsContainer = document.getElementById('carouselDots');
             const prevBtn = document.getElementById('prevSlide');
@@ -300,26 +315,23 @@
             let currentIndex = 0;
             let slideCount = imageList.length;
             let autoPlayInterval;
-            const autoPlayDelay = 3000; // 3秒切换一次
+            const autoPlayDelay = 3000;
 
-            // 如果没有图片，则不渲染
             if (slideCount === 0) return;
 
-            // 动态生成幻灯片和指示点
             function renderSlidesAndDots() {
-                // 生成幻灯片
                 slidesContainer.innerHTML = '';
                 imageList.forEach((src, index) => {
                     const slideDiv = document.createElement('div');
                     slideDiv.className = 'carousel-slide';
                     const img = document.createElement('img');
                     img.src = src;
-                    img.alt = `产品图 ${index + 1}`;
+                    img.alt = `Powercore V3 产品图 ${index + 1}`;
+                    img.onerror = function() { this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found'; };
                     slideDiv.appendChild(img);
                     slidesContainer.appendChild(slideDiv);
                 });
 
-                // 生成指示点
                 dotsContainer.innerHTML = '';
                 for (let i = 0; i < slideCount; i++) {
                     const dot = document.createElement('span');
@@ -332,37 +344,31 @@
                 }
             }
 
-            // 跳转到指定幻灯片
             function goToSlide(index) {
                 if (index < 0) index = slideCount - 1;
                 if (index >= slideCount) index = 0;
                 currentIndex = index;
                 slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
                 
-                // 更新指示点激活状态
                 const dots = document.querySelectorAll('.carousel-dot');
                 dots.forEach((dot, i) => {
                     dot.classList.toggle('active', i === currentIndex);
                 });
             }
 
-            // 下一张
             function nextSlide() {
                 goToSlide(currentIndex + 1);
             }
 
-            // 上一张
             function prevSlide() {
                 goToSlide(currentIndex - 1);
             }
 
-            // 启动自动播放
             function startAutoPlay() {
                 stopAutoPlay();
                 autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
             }
 
-            // 停止自动播放
             function stopAutoPlay() {
                 if (autoPlayInterval) {
                     clearInterval(autoPlayInterval);
@@ -370,23 +376,19 @@
                 }
             }
 
-            // 初始化
             renderSlidesAndDots();
             goToSlide(0);
             startAutoPlay();
 
-            // 事件监听：箭头点击
             prevBtn.addEventListener('click', function() {
                 prevSlide();
-                stopAutoPlay(); // 点击后暂停自动播放，可根据需求决定是否重新启动
-                // 如果想点击后重新开始自动播放，可以在这里调用 startAutoPlay()
+                stopAutoPlay();
             });
             nextBtn.addEventListener('click', function() {
                 nextSlide();
                 stopAutoPlay();
             });
 
-            // 鼠标悬停时暂停自动播放，离开时恢复
             const carousel = document.getElementById('carousel');
             carousel.addEventListener('mouseenter', stopAutoPlay);
             carousel.addEventListener('mouseleave', startAutoPlay);
