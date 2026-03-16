@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>信号转换模块 | LINSAI</title>
+    <title>信号转换模块（Step/Dir・CW/CCW対応） | LINSAI</title>
     <style>
-        /* ===== 全局样式 (保留原有并补充轮播图样式) ===== */
+        /* ===== 全局样式 (保留原有) ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
@@ -123,7 +123,7 @@
             text-decoration:underline;
         }
 
-        /* ===== 新增轮播图样式 ===== */
+        /* ===== 轮播图样式 ===== */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -142,7 +142,7 @@
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 0; /* 容器已有圆角 */
+            border-radius: 0;
             box-shadow: none;
         }
         .carousel-arrow {
@@ -223,50 +223,50 @@
         </div>
     </header>
 
-    <main class="container"> <!-- 添加container以对齐内容 -->
+    <main class="container">
         <div class="product-detail">
-            <!-- 左侧：轮播图区域 (替换原单张图片) -->
+            <!-- 左侧：轮播图区域 -->
             <div class="product-gallery">
                 <div class="carousel-container" id="carousel">
-                    <!-- 幻灯片列表 (由JS动态生成) -->
                     <div class="carousel-slides" id="carouselSlides"></div>
-                    <!-- 左右箭头 -->
                     <div class="carousel-arrow left" id="prevSlide">&#10094;</div>
                     <div class="carousel-arrow right" id="nextSlide">&#10095;</div>
-                    <!-- 指示点容器 -->
                     <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </div>
 
-            <!-- 右侧：产品信息 (完全保留) -->
+            <!-- 右侧：产品信息（基于NI知识库文章重构） -->
             <div class="product-info">
-                <h1>信号转换模块</h1>
+                <h1>信号转换模块（Step/Dir・CW/CCW対応）</h1>
                 <p class="product-price-large">¥48,000</p>
                 <div class="product-description">
-                    <p>各種産業用信号（NPN/PNP、電圧/電流、RS232/TTLなど）を相互変換するモジュール。</p>
+                    <p>各種産業用信号（NPN/PNP、電圧/電流）に加え、<strong>ステッピングモータ制御に特化したパルス信号（Step/Dir方式・CW/CCW方式）</strong>の相互変換・中継が可能な多機能モジュールです。NI MotionコントローラをはじめとするCNC機器やPLCと、モータドライバ間の信号整合に最適です。</p>
                 </div>
 
                 <div class="product-specs">
                     <h2>主な仕様</h2>
-                    <table class="spec-table"> <!-- 增加spec-table类 -->
-                        <tr><th>入力信号</th><td>NPN、PNP、電圧0-10V、電流4-20mA</td></tr>
-                        <tr><th>出力信号</th><td>選択式、同上</td></tr>
+                    <table class="spec-table">
+                        <tr><th>入力信号</th><td>NPN/PNP、電圧0-10V、電流4-20mA、<br>1パルス(Step/Dir)方式、2パルス(CW/CCW)方式</td></tr>
+                        <tr><th>出力信号</th><td>選択式（入力に対応）／最大200kHzパルス出力対応</td></tr>
                         <tr><th>チャンネル数</th><td>2ch（独立）</td></tr>
-                        <tr><th>電源</th><td>DC24V</td></tr>
+                        <tr><th>パルス制御方式</th><td>Step/Dir方式（ステップ＋方向）またはCW/CCW方式（正転/逆転パルス）を切替可能</td></tr>
+                        <tr><th>電源</th><td>DC24V / 各チャンネル絶縁</td></tr>
                     </table>
                 </div>
 
                 <div class="product-description">
-                    <h2>特長</h2>
-                    <ul style="margin-left:20px;"> <!-- 增加左内边距 -->
-                        <li>DINレール取付可能</li>
-                        <li>各チャンネル絶縁済み</li>
-                        <li>LED表示で動作確認容易</li>
-                        <li>PLC、センサ、コントローラ間の接続に最適</li>
+                    <h2>特長（Step/Dir と CW/CCW の詳細）</h2>
+                    <ul style="margin-left:20px;">
+                        <li><strong>1パルス(Step/Dir)方式対応</strong> – ステップ入力で角度・速度を、方向入力のHigh/Lowで回転方向を制御。汎用モータドライバとの接続に最適。</li>
+                        <li><strong>2パルス(CW/CCW)方式対応</strong> – CW入力へのパルスで時計回り、CCW入力へのパルスで反時計回りを指示。位相管理が容易。</li>
+                        <li><strong>両方式の切替可能</strong> – DIPスイッチまたはソフトウェアで簡単に切替。NI-Motion（MAX）など各種コントローラとの親和性が高い。</li>
+                        <li><strong>パルス数・周波数制御</strong> – 入力パルス数で角度（移動量）を、周波数で速度を精密に調整。最大200kHzの高速パルスに対応。</li>
+                        <li><strong>絶縁・レベル変換</strong> – 各チャンネル独立絶縁、24V/5V/3.3Vロジックレベル変換機能内蔵。</li>
+                        <li><strong>DINレール取付可能</strong> – 制御盤内での省スペース設置が可能。</li>
                     </ul>
                 </div>
 
-                <a href="products.html" class="back-link">← 製品一覧に戻る</a> <!-- 应用back-link类 -->
+                <a href="products.html" class="back-link">← 製品一覧に戻る</a>
             </div>
         </div>
     </main>
@@ -280,15 +280,13 @@
     <script>
         (function() {
             // ===== 信号转换模块 图片配置 =====
-            // 请根据实际图片文件名修改以下数组 (建议命名如 images/signal-converter-1.jpg, ...)
             const imageList = [
-                'images/signal-converter/signal-converter-1.jpg',   // 第一张图 (模块正面)
-                'images/signal-converter/signal-converter-2.jpg',   // 第二张图 (接口特写)
-                'images/signal-converter/signal-converter-3.jpg',   // 第三张图 (安装示例)
-                'images/signal-converter/signal-converter-4.jpg'    // 第四张图 (应用场景) — 可根据实际数量增减
+                'images/signal-converter/signal-converter-1.jpg',
+                'images/signal-converter/signal-converter-2.jpg',
+                'images/signal-converter/signal-converter-3.jpg',
+                'images/signal-converter/signal-converter-4.jpg'
             ];
 
-            // 轮播元素
             const slidesContainer = document.getElementById('carouselSlides');
             const dotsContainer = document.getElementById('carouselDots');
             const prevBtn = document.getElementById('prevSlide');
@@ -297,11 +295,10 @@
             let currentIndex = 0;
             let slideCount = imageList.length;
             let autoPlayInterval;
-            const autoPlayDelay = 3000; // 3秒切换
+            const autoPlayDelay = 3000;
 
-            if (slideCount === 0) return; // 没有图片则不初始化
+            if (slideCount === 0) return;
 
-            // 动态生成幻灯片和指示点
             function renderSlidesAndDots() {
                 slidesContainer.innerHTML = '';
                 imageList.forEach((src, index) => {
@@ -310,7 +307,6 @@
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = `信号转换模块 产品图 ${index + 1}`;
-                    // 图片加载失败时显示占位提示 (可选)
                     img.onerror = function() { this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found'; };
                     slideDiv.appendChild(img);
                     slidesContainer.appendChild(slideDiv);
@@ -354,15 +350,13 @@
                 }
             }
 
-            // 初始化
             renderSlidesAndDots();
             goToSlide(0);
             startAutoPlay();
 
-            // 事件监听
             prevBtn.addEventListener('click', function() {
                 prevSlide();
-                stopAutoPlay(); // 点击后暂停自动播放 (可根据需要重新启动)
+                stopAutoPlay();
             });
             nextBtn.addEventListener('click', function() {
                 nextSlide();
