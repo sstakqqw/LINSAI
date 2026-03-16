@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>事業内容 | LINSAI</title>
     <style>
-        /* 全局样式与首页一致，此处省略重复，实际使用时需包含完整样式 */
+        /* 全局样式与首页一致 */
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height:1.7; color:#1a1a1a; background:#fff; }
         .container { max-width:1200px; margin:0 auto; padding:0 24px; }
@@ -26,9 +26,49 @@
         .section h2 { font-size:1.8rem; font-weight:500; margin-bottom:30px; padding-bottom:10px; border-bottom:2px solid #c0392b; display:inline-block; }
         .two-col { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin:40px 0; }
         .col h3 { font-size:1.5rem; margin-bottom:20px; color:#2c3e50; }
-        .img-placeholder { background:#eaeef2; height:200px; border-radius:8px; margin:20px 0; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg>'); background-repeat:no-repeat; background-position:center; background-size:40px; }
+        /* 图片样式 */
+        .service-image {
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #f0f0f0;
+        }
+        .service-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
         .feature-list { background:#f5f5f5; padding:30px; border-radius:12px; margin:40px 0; }
-        @media (max-width:768px) { .nav-menu { display:none; } .two-col { grid-template-columns:1fr; } }
+        /* 新增服务板块样式 */
+        .upgrade-service {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to right, #f9f9f9, #f0f0f0);
+            border-radius: 12px;
+            border-left: 4px solid #c0392b;
+        }
+        .upgrade-service h3 {
+            font-size: 1.6rem;
+            color: #c0392b;
+            margin-bottom: 20px;
+        }
+        .upgrade-service p {
+            margin-bottom: 20px;
+        }
+        .upgrade-service .service-image {
+            max-width: 400px;
+        }
+        @media (max-width:768px) { 
+            .nav-menu { display:none; } 
+            .two-col { grid-template-columns:1fr; } 
+        }
     </style>
 </head>
 <body>
@@ -61,52 +101,73 @@
         <!-- 事业概要 -->
         <section class="section">
             <h2>事業の概要</h2>
-            <p style="font-size:1.1rem; color:#c0392b; margin:20px 0;">ここにキャッチコピーや事業理念を簡潔に入れてください。</p>
-            <p>[您的公司名称]は、[年]に[場所]で創業しました。私たちは[コア技術/価値]を基盤に、[事業領域]に取り組んでいます。創業以来、[大切にしている価値観]を胸に、技術者・クリエイターが「作りたい」を実現できる環境づくりを支援しています。</p>
-            <p>現在、私たちの会社は2つの事業で成り立っています。一つは、[事業Aの概要]、もう一つは、[事業Bの概要]です。</p>
+            <p style="font-size:1.1rem; color:#c0392b; margin:20px 0;">「作りたい」を実現する技術を、手のひらに。</p>
+            <p>LINSAIは、2016年に東京で創業しました。私たちは「オープンでアクセスしやすい工作技術」を基盤に、卓上CNC加工機や放電加工機、射出成形機などの開発・販売に取り組んでいます。創業以来、技術者・クリエイターが「作りたい」を実現できる環境づくりを支援しています。</p>
+            <p>現在、私たちの会社は2つの事業で成り立っています。一つは、小型工作機械を中心とした「オリジナル製品事業」。もう一つは、生産設備の保守・運用を支える「FA部品リユース・機械アップグレード事業」です。</p>
         </section>
 
-        <!-- 第一事业 -->
+        <!-- 第一事业：オリジナル製品事業 -->
         <section class="section">
             <h2>オリジナル製品事業</h2>
             <div class="two-col">
                 <div class="col">
-                    <h3>小型工作ツールの開発・販売</h3>
-                    <p>[製品カテゴリ]を中心に、卓上で使えるコンパクトな工作機械を開発・販売しています。私たちは、「[信念/キャッチフレーズ]」という信念のもと、高い性能と使いやすさを両立した製品を提供します。</p>
-                    <p>代表的な製品は「[製品名A]」です。これは[特徴・用途]。大学・研究機関から個人クリエイターまで、幅広い方々に利用いただいています。</p>
-                    <div class="img-placeholder"></div>
+                    <h3>小型CNC加工機・EDM機の開発・レーザー加工機・販売</h3>
+                    <p>Powercoreシリーズをはじめとする卓上CNC加工機・放電加工機は、コンパクトながら業務用に匹敵する精度と剛性と静音設計を実現。大学研究室、試作開発現場、個人クリエイターまで幅広く活用されています。完全オープンソースのEDM電源「Powercore V3」は、ワイヤー放電加工を自宅で可能にした革新的な製品です。</p>
+                    <!-- 图片链接：点击进入 Powercore V3 产品页面 -->
+                    <a href="product-powercore-v3.html" class="service-image">
+                        <img src="images/service/powercore-v3-service.jpg" alt="Powercore V3 EDM電源">
+                    </a>
                 </div>
                 <div class="col">
-                    <h3>射出成形機と金型加工</h3>
-                    <p>[製品名B]は、卓上で手軽に射出成形を可能にする機械です。特に、サステナブル素材の成形テストなどに活用されています。</p>
-                    <p>[製品名A]と[製品名B]を組み合わせれば、その日のうちに金型製作から成形までを完了することも可能です。これにより、開発スピードを大幅に向上させます。</p>
-                    <div class="img-placeholder"></div>
+                    <h3>成形機と金型加工</h3>
+                    <p>成形機は、手のひらサイズの金型で少量試作を可能にします。CNCフライス「DM2400」と組み合わせれば、金型製作から成形までを自社で完結。サステナブル素材の成形テストや小ロット生産に最適です。</p>
+                    <!-- 图片链接：点击进入 INARI 产品页面 -->
+                    <a href="product-inari.html" class="service-image">
+                        <img src="images/service/inari-service.jpg" alt="INARI 射出成形機">
+                    </a>
                 </div>
             </div>
             <div class="feature-list">
                 <dl>
                     <dt style="font-weight:600; color:#c0392b;">主な導入先 / 活用事例</dt>
-                    <dd>・[機関名/企業名A]、[機関名/企業名B] など、多くの研究機関・大学で採用されています。</dd>
-                    <dd>・[業界/分野]における試作開発、[具体的な製品例]の部品製造に利用されています。</dd>
+                    <dd>・研究室</dd>
+                    <dd>・試作部門、開発チーム</dd>
+                    <dd>・個人クリエイターによるジュエリー製作、模型製作</dd>
                 </dl>
             </div>
         </section>
 
-        <!-- 第二事业 -->
+        <!-- 第二事业：FA部品リユース・機械アップグレード事業 -->
         <section class="section">
-            <h2>第二事業（例：保守部品・サービス事業）</h2>
-            <p>[事業名]は、[サービス概要]を提供する事業です。主な顧客は[顧客層]で、[課題]を抱えるお客様に[ソリューション]を提供しています。</p>
+            <h2>FA部品リユース・機械アップグレード事業</h2>
+            <p>生産設備の保守・メンテナンスに欠かせない、モーションコントローラ、サーボモータ、センサなどを中心に、厳選した中古部品を販売。メーカー生産終了品の入手困難・設備停止リスクを解決します。</p>
             <div class="two-col">
                 <div class="col">
-                    <h3>事業の特徴：豊富な在庫と迅速な対応</h3>
-                    <p>[課題：例えば、生産終了品の入手困難、設備停止リスクなど]に対応するため、当社は[在庫数]点以上の[製品ジャンル]を常時在庫しています。即日発送体制を整え、お客様の急なニーズに応えます。</p>
-                    <div class="img-placeholder"></div>
+                    <h3>豊富な在庫と迅速な対応</h3>
+                    <p>当社は1,000点以上のFA部品（PLC、モータドライバ、タッチパネルなど）を常時在庫。即日発送体制を整え、お客様の急なニーズに応えます。</p>
+                    <!-- 图片链接：点击进入 FA部品一覧ページ（示例） -->
+                    <a href="fa-parts-list.html" class="service-image">
+                        <img src="images/service/fa-inventory.jpg" alt="FA部品在庫例">
+                    </a>
                 </div>
                 <div class="col">
                     <h3>品質へのこだわり</h3>
-                    <p>当社では、すべての製品に対して独自の動作確認ソフトウェアとマニュアルに基づく徹底した検査を実施しています。[年数]年以上培ったノウハウにより、担当者によらない高い検査品質を維持しています。</p>
-                    <div class="img-placeholder"></div>
+                    <p>すべての製品は専用ソフトウェアとマニュアルに基づく動作確認を実施。10年以上の経験に基づくノウハウで、担当者によらない高い検査品質を維持しています。</p>
+                    <!-- 图片链接：点击进入 品質検査工程ページ（示例） -->
+                    <a href="quality-control.html" class="service-image">
+                        <img src="images/service/quality-check.jpg" alt="検査工程">
+                    </a>
                 </div>
+            </div>
+
+            <!-- 新增：中古NC机械升级・改主板・停产配件设计加工 -->
+            <div class="upgrade-service">
+                <h3>中古NC機械のアップグレード・改造・保守</h3>
+                <p>旧式NC工作機械の制御基板を最新のものに交換（リトラフィット）することで、機械の寿命を延ばし、生産性を向上させます。また、生産終了となった電子部品・基板の設計・加工を承ります。お客様の設備を長く使い続けるためのトータルサポートを提供します。</p>
+                <!-- 图片链接：点击进入 升级服务详细页面（示例） -->
+                <a href="retrofit-service.html" class="service-image">
+                    <img src="images/service/retrofit.jpg" alt="NC機械アップグレード">
+                </a>
             </div>
         </section>
     </main>
