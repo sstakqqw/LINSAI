@@ -223,50 +223,57 @@
         </div>
     </header>
 
-    <main class="container"> <!-- 添加container以对齐内容，保持一致性 -->
+    <main class="container">
         <div class="product-detail">
-            <!-- 左侧：轮播图区域 (替换原单张图片) -->
+            <!-- 左侧：轮播图区域 -->
             <div class="product-gallery">
                 <div class="carousel-container" id="carousel">
-                    <!-- 幻灯片列表 (由JS动态生成) -->
                     <div class="carousel-slides" id="carouselSlides"></div>
-                    <!-- 左右箭头 -->
                     <div class="carousel-arrow left" id="prevSlide">&#10094;</div>
                     <div class="carousel-arrow right" id="nextSlide">&#10095;</div>
-                    <!-- 指示点容器 -->
                     <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </div>
 
-            <!-- 右侧：产品信息 (完全保留) -->
+            <!-- 右侧：产品信息 (已增强详细说明) -->
             <div class="product-info">
-                <h1>EDM脉冲电源板</h1>
-                <p class="product-price-large">¥420,000</p>
+                <h1>EDM電源基板</h1>
+                <p class="product-price-large">¥220,000</p>
                 <div class="product-description">
-                    <p>放電加工機用のパルス電源基板。高周波パルスを発生させ、安定した放電加工を実現します。</p>
+                    <p>放電加工機用のパルス電源基板です。<strong>純ハードウェア実装</strong>により高速応答を実現。高周波パルスを発生させ、安定した放電加工を可能にします。</p>
+                    <p>特に微細加工において威力を発揮するよう設計されており、<strong>高速MOSFETと無極性コンデンサ</strong>を採用することで、小パルス幅でありながら大ピーク電流を供給。加工面の精細さと加工速度の両立を実現しました。</p>
+                    <p>さらに<strong>高速ギャップサンプリング回路</strong>と<strong>高速短路保護機能</strong>を内蔵。放電ギャップの状態をナノ秒単位で監視し、アーク発生時には瞬時に出力を遮断して電極とワークを保護します。</p>
+                    <p>また、放電状態を示す<strong>同期出力信号</strong>をリアルタイムで出力。上位コントローラ（CNC・PLCなど）で放電状態をサンプリングし、適応制御や加工プロセスの最適化に活用できます。</p>
                 </div>
 
                 <div class="product-specs">
                     <h2>主な仕様</h2>
-                    <table class="spec-table"> <!-- 增加spec-table类以应用样式 -->
+                    <table class="spec-table">
                         <tr><th>出力電圧</th><td>100～200V</td></tr>
                         <tr><th>ピーク電流</th><td>最大50A</td></tr>
                         <tr><th>パルス幅</th><td>1～1000μs</td></tr>
-                        <tr><th>制御方式</th><td>FPGA制御</td></tr>
+                        <tr><th>制御方式</th><td> 純ハードウェア高速アナログ回路</td></tr>
+                        <tr><th>ギャップサンプリング速度</th><td>10ns</td></tr>
+                        <tr><th>短路保護応答時間</th><td>500ns以下</td></tr>
+                        <tr><th>出力同期信号</th><td>TTLレベル (放電ON/OFF、アラーム)</td></tr>
+                        <tr><th>電源</th><td>DC24V /単相100V（内部絶縁）</td></tr>
                     </table>
                 </div>
 
                 <div class="product-description">
                     <h2>特長</h2>
-                    <ul style="margin-left:20px;"> <!-- 增加左内边距 -->
-                        <li>微細加工から荒加工まで幅広く対応</li>
-                        <li>放電状態監視機能付き</li>
-                        <li>各種アーク検出・保護回路内蔵</li>
-                        <li>コンパクト設計で組み込み容易</li>
+                    <ul style="margin-left:20px;">
+                        <li><strong>純ハードウェア高速ギャップサンプリング</strong> – アナログコンパレータの協調により、10ns単位で放電状態を監視。従来のソフトウェア処理では不可能なリアルタイム性を実現。</li>
+                        <li><strong>高速短路保護</strong> – 放電ギャップの短絡を100ns以内に検出・遮断。電極とワークの溶着を防止し、安定した加工を継続。</li>
+                        <li><strong>高速MOSFET + 無極性コンデンサ</strong> – 低インダクタンス・高周波対応のMOSFETと低ESRの無極性コンデンサを採用。パルスの立ち上がり/立ち下がりを高速化し、小パルス幅でも大ピーク電流を供給。微細加工の精度と加工面品位が向上。</li>
+                        <li><strong>微細加工から荒加工まで幅広く対応</strong> – パルス幅1μsから1000μsまで可変。微細仕上げから高能率荒加工まで、一台でカバー。</li>
+                        <li><strong>放電状態監視機能付き</strong> – 平均電圧・電流モニタ出力に加え、同期出力信号により上位システムで放電状態をリアルタイム把握可能。</li>
+                        <li><strong>各種アーク検出・保護回路内蔵</strong> – 異常アークを高速に検出し、出力を遮断。機械へのダメージを最小限に抑えます。</li>
+                        <li><strong>コンパクト設計で組み込み容易</strong> – DINレール取付可能な筐体オプションあり。既存の放電加工機への後付けも容易。</li>
                     </ul>
                 </div>
 
-                <a href="products.html" class="back-link">← 製品一覧に戻る</a> <!-- 应用back-link类 -->
+                <a href="products.html" class="back-link">← 製品一覧に戻る</a>
             </div>
         </div>
     </main>
@@ -280,15 +287,13 @@
     <script>
         (function() {
             // ===== EDM脉冲电源板 图片配置 =====
-            // 请根据实际图片文件名修改以下数组 (建议命名如 images/edm-pulse-board-1.jpg, ...)
             const imageList = [
-                'images/edm-pulse-board/edm-pulse-board-1.jpg',   // 第一张图 (板卡正面)
-                'images/edm-pulse-board/edm-pulse-board-2.jpg',   // 第二张图 (接口特写)
-                'images/edm-pulse-board/edm-pulse-board-3.jpg',   // 第三张图 (应用示例)
-                'images/edm-pulse-board/edm-pulse-board-4.jpg'    // 第四张图 (细节) — 可根据实际数量增减
+                'images/edm-pulse-board/edm-pulse-board-1.jpg',
+                'images/edm-pulse-board/edm-pulse-board-2.jpg',
+                'images/edm-pulse-board/edm-pulse-board-3.jpg',
+                'images/edm-pulse-board/edm-pulse-board-4.jpg'
             ];
 
-            // 轮播元素
             const slidesContainer = document.getElementById('carouselSlides');
             const dotsContainer = document.getElementById('carouselDots');
             const prevBtn = document.getElementById('prevSlide');
@@ -297,11 +302,10 @@
             let currentIndex = 0;
             let slideCount = imageList.length;
             let autoPlayInterval;
-            const autoPlayDelay = 3000; // 3秒切换
+            const autoPlayDelay = 3000;
 
-            if (slideCount === 0) return; // 没有图片则不初始化
+            if (slideCount === 0) return;
 
-            // 动态生成幻灯片和指示点
             function renderSlidesAndDots() {
                 slidesContainer.innerHTML = '';
                 imageList.forEach((src, index) => {
@@ -310,7 +314,6 @@
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = `EDM脉冲电源板 产品图 ${index + 1}`;
-                    // 图片加载失败时显示占位提示 (可选)
                     img.onerror = function() { this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found'; };
                     slideDiv.appendChild(img);
                     slidesContainer.appendChild(slideDiv);
@@ -354,15 +357,13 @@
                 }
             }
 
-            // 初始化
             renderSlidesAndDots();
             goToSlide(0);
             startAutoPlay();
 
-            // 事件监听
             prevBtn.addEventListener('click', function() {
                 prevSlide();
-                stopAutoPlay(); // 点击后暂停自动播放 (可根据需要重新启动)
+                stopAutoPlay();
             });
             nextBtn.addEventListener('click', function() {
                 nextSlide();
