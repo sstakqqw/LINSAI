@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機器犬 製作工程 | LINSAI</title>
+    <style>
+        /* ===== 全局样式 ===== */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height:1.7;
+            color:#1a1a1a;
+            background:#fff;
+        }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        header {
+            border-bottom:1px solid #e5e5e5;
+            padding:20px 0;
+        }
+        .header-inner {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .logo {
+            font-size:1.8rem;
+            font-weight:700;
+            color:#2c3e50;
+            text-decoration:none;
+        }
+        .nav-menu {
+            display:flex;
+            list-style:none;
+            gap:32px;
+            flex-wrap:wrap;
+        }
+        .nav-menu a {
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+        }
+        .nav-menu a:hover { color:#c0392b; }
+        .lang-switch {
+            display:flex;
+            gap:8px;
+        }
+        .lang-switch a {
+            text-decoration:none;
+            color:#888;
+        }
+        .lang-switch a.active {
+            color:#1a1a1a;
+            font-weight:500;
+        }
+        footer {
+            border-top:1px solid #eee;
+            padding:30px 0;
+            margin-top:60px;
+            text-align:center;
+            color:#888;
+        }
+        .page-title {
+            background:#f9f9f9;
+            padding:60px 0 20px;
+            text-align:center;
+            margin-bottom:50px;
+        }
+        .page-title h1 {
+            font-size:2.4rem;
+            font-weight:500;
+        }
+        /* 制作工程特有样式 */
+        .process-intro {
+            margin-bottom: 60px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+        .process-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .process-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            background-color: #f0f0f0;
+        }
+        .process-content {
+            padding: 25px;
+        }
+        .process-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #c0392b;
+        }
+        .process-content p {
+            color: #666;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width:768px) {
+            .nav-menu { display:none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LINSAI</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="company.html">企業情報</a></li>
+                <li><a href="message.html">創業者メッセージ</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <div class="lang-switch">
+                <a href="#" class="active">JP</a>
+                <span>/</span>
+                <a href="#">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <div class="container">
+            <h1>機器犬（ロボットドッグ）製作工程</h1>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="process-intro">
+            <p style="font-size:1.2rem;">当社のオリジナル製品「RoboDog」は、すべてのパーツを自社設計・加工し、一頭一頭丁寧に組み上げています。設計から最終調整までの10の工程を写真で紹介します。</p>
+        </div>
+
+        <!-- 工程卡片网格（10个步骤） -->
+        <div class="process-grid">
+            <!-- 1: 設計 -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/1.jpg" alt="設計" class="process-image">
+                <div class="process-content">
+                    <h3>1. 機構設計</h3>
+                    <p>3D CADを用いて各リンクの寸法・関節可動域・重心バランスを最適化。歩行シミュレーションを繰り返し、理想的な機構を導き出します。</p>
+                </div>
+            </div>
+            <!-- 2: フレーム加工 -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/2.jpg" alt="フレーム加工" class="process-image">
+                <div class="process-content">
+                    <h3>2. フレーム切削</h3>
+                    <p>ジュラルミン板材を自社CNCフライスで精密削り出し。軽量かつ高剛性なモノコックフレームを製作します。</p>
+                </div>
+            </div>
+            <!-- 3: 脚部リンク加工 -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/3.jpg" alt="脚部リンク加工" class="process-image">
+                <div class="process-content">
+                    <h3>3. 脚部リンク加工</h3>
+                    <p>大腿・下腿リンクをワイヤー放電加工機で切断。肉抜き形状により軽量化しながらも強度を維持。</p>
+                </div>
+            </div>
+            <!-- 4: モータ・減速機組付け -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/4.jpg" alt="モータ組付け" class="process-image">
+                <div class="process-content">
+                    <h3>4. アクチュエータ組付け</h3>
+                    <p>ブラシレスDCモータと高精度遊星減速機を組み合わせ、各関節に搭載。トルクと応答性を両立します。</p>
+                </div>
+            </div>
+            <!-- 5: 基板実装 -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/5.jpg" alt="基板実装" class="process-image">
+                <div class="process-content">
+                    <h3>5. 制御基板実装</h3>
+                    <p>IMU・モータドライバ・通信モジュールを搭載したメイン基板に、高密度実装。放熱設計も施しています。</p>
+                </div>
+            </div>
+            <!-- 6: 配線・ハーネス加工 -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/6.jpg" alt="配線" class="process-image">
+                <div class="process-content">
+                    <h3>6. 配線・ハーネス加工</h3>
+                    <p>各モータへ電源・信号を供給するハーネスを手作業で作成。ノイズ対策と信頼性を確保します。</p>
+                </div>
+            </div>
+            <!-- 7: フレーム組立て -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/7.jpg" alt="組立て" class="process-image">
+                <div class="process-content">
+                    <h3>7. フレーム組立て</h3>
+                    <p>加工済みフレームに脚部ユニット・基板・バッテリーを組み込み、ロボットの骨格を完成させます。</p>
+                </div>
+            </div>
+            <!-- 8: ファームウェア書込み -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/8.jpg" alt="ファームウェア" class="process-image">
+                <div class="process-content">
+                    <h3>8. ファームウェア書込み</h3>
+                    <p>歩行制御アルゴリズムを書き込み、各モータのパラメータを調整。個体差を吸収するキャリブレーションを実施。</p>
+                </div>
+            </div>
+            <!-- 9: 動作試験 -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/9.jpg" alt="動作試験" class="process-image">
+                <div class="process-content">
+                    <h3>9. 実機歩行試験</h3>
+                    <p>平坦路・不整地での歩行テスト。センサフィードバックを確認し、歩容の最適化を行います。</p>
+                </div>
+            </div>
+            <!-- 10: 最終検査・出荷 -->
+            <div class="process-card">
+                <img src="images/process/robot-dog/10.jpg" alt="最終検査" class="process-image">
+                <div class="process-content">
+                    <h3>10. 最終検査・梱包</h3>
+                    <p>全機能・外観チェック後、専用ケースに収納。出荷前最終動作確認を経てお客様のもとへ。</p>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align: center; color: #888; margin: 20px 0;">※画像は実際の製作工程を撮影したものです。</p>
+
+        <div style="text-align: center;">
+            <a href="service.html" class="back-link">← 事業内容に戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
