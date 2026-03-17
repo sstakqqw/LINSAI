@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中古NC機械アップグレード・改造・保守 | LINSAI</title>
     <style>
-        /* ===== 全局样式 (与service.html保持一致) ===== */
+        /* ===== 全局样式 ===== */
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
@@ -89,7 +89,7 @@
             border-bottom:2px solid #c0392b;
             display:inline-block;
         }
-        /* 两列布局（一行两张卡片） */
+        /* 两列布局（每行两张卡片，图片下方带文字） */
         .service-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -101,20 +101,12 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: box-shadow 0.2s;
             display: flex;
             flex-direction: column;
         }
         .service-card:hover {
-            transform: translateY(-5px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-        }
-        .service-card a {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
         }
         .service-image {
             width: 100%;
@@ -124,8 +116,7 @@
             background-color: #f0f0f0;
         }
         .service-content {
-            padding: 25px;
-            flex: 1;
+            padding: 20px 20px 25px;
         }
         .service-content h3 {
             font-size: 1.5rem;
@@ -134,15 +125,7 @@
         }
         .service-content p {
             color: #666;
-            margin-bottom: 15px;
-        }
-        /* 适用产品标签 */
-        .product-target {
-            font-weight: 600;
-            color: #2c3e50;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-            margin-top: auto;
+            margin-bottom: 0;
         }
         .back-link {
             display: inline-block;
@@ -189,56 +172,45 @@
     <main class="container">
         <section class="section">
             <h2>サービス内容</h2>
-            <p style="margin-bottom:30px;">旧式NC工作機械の延命・性能向上を実現する、当社のリトラフィットサービス。各工程の詳細は画像をクリックしてください。</p>
+            <p style="margin-bottom:30px;">各工程の概要をご紹介します。画像はイメージです。</p>
 
-            <!-- 两列布局：四个服务项，每项下方注明适用产品 -->
+            <!-- 两列布局：图片 + 下方文字（无链接） -->
             <div class="service-grid">
                 <!-- 1. 改造 -->
                 <div class="service-card">
-                    <a href="retrofit-modification.html">
-                        <img src="images/service/retrofit-mod.jpg" alt="改造" class="service-image">
-                        <div class="service-content">
-                            <h3>改造</h3>
-                            <p>制御基板の交換、CNCシステムの最新化、サーボモータのアップグレードにより、機械の機能を拡張・高性能化します。</p>
-                            <div class="product-target">対象製品：ファナック、三菱、安川、オークマ</div>
-                        </div>
-                    </a>
+                    <img src="images/service/Roland-PNC-3000/retrofit-mod.jpg" alt="改造" class="service-image">
+                    <div class="service-content">
+                        <h3>改造</h3>
+                        <p>制御基板の交換、CNCシステムの最新化、モータのアップグレードにより、機械の機能を拡張・高性能化します。</p>
+                    </div>
                 </div>
                 <!-- 2. 配線 -->
                 <div class="service-card">
-                    <a href="retrofit-wiring.html">
-                        <img src="images/service/retrofit-wiring.jpg" alt="配線" class="service-image">
-                        <div class="service-content">
-                            <h3>配線</h3>
-                            <p>制御盤内の配線取り替え、シールド処理、ノイズ対策を実施。経年劣化による接触不良や誤動作を防止します。</p>
-                            <div class="product-target">対象製品：シーメンス、ベッコフ、キーンス</div>
-                        </div>
-                    </a>
+                    <img src="images/service/Roland-PNC-3000/retrofit-wiring.jpg" alt="配線" class="service-image">
+                    <div class="service-content">
+                        <h3>配線</h3>
+                        <p>制御盤内の配線取り替え、シールド処理、ノイズ対策を実施。経年劣化による接触不良や誤動作を防止します。</p>
+                    </div>
                 </div>
                 <!-- 3. モータ交換 -->
                 <div class="service-card">
-                    <a href="retrofit-motor.html">
-                        <img src="images/service/retrofit-motor.jpg" alt="モータ交換" class="service-image">
-                        <div class="service-content">
-                            <h3>モータ交換</h3>
-                            <p>高効率・高精度な最新サーボモータへの交換、取り付け・調整。トルク向上と消費電力削減に貢献します。</p>
-                            <div class="product-target">対象製品：安川、三菱、ファナック、パナソニック</div>
-                        </div>
-                    </a>
+                    <img src="images/service/Roland-PNC-3000/retrofit-motor.jpg" alt="モータ交換" class="service-image">
+                    <div class="service-content">
+                        <h3>モータ交換</h3>
+                        <p>高効率・高精度な最新モータへの交換、取り付け・調整。トルク向上と消費電力削減に貢献します。</p>
+                    </div>
                 </div>
                 <!-- 4. 洗浄 -->
                 <div class="service-card">
-                    <a href="retrofit-cleaning.html">
-                        <img src="images/service/retrofit-cleaning.jpg" alt="洗浄" class="service-image">
-                        <div class="service-content">
-                            <h3>洗浄</h3>
-                            <p>機械内部の切削油・スラッジ・錆の除去、潤滑油交換。徹底洗浄により機械寿命を延ばし、精度維持に寄与します。</p>
-                            <div class="product-target">対象製品：汎用旋盤、マシニングセンタ、研削盤</div>
-                        </div>
-                    </a>
+                    <img src="images/service/Roland-PNC-3000/retrofit-cleaning.jpg" alt="洗浄" class="service-image">
+                    <div class="service-content">
+                        <h3>洗浄</h3>
+                        <p>機械内部の切削油・スラッジ・錆の除去、潤滑油交換。徹底洗浄により機械寿命を延ばし、精度維持に寄与します。</p>
+                    </div>
                 </div>
             </div>
 
+            <!-- 注：图片路径为示例，请替换为实际图片文件 -->
             <p style="text-align: center; color: #888; margin-top: 20px;">※画像はイメージです。実際の作業とは異なる場合があります。</p>
             <div style="text-align: center;">
                 <a href="service.html" class="back-link">← 事業内容に戻る</a>
