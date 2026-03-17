@@ -45,6 +45,20 @@
             height: auto;
             display: block;
         }
+        /* 静态图片样式（无链接，仅用于展示） */
+        .static-image {
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background-color: #f0f0f0;
+        }
+        .static-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
         .feature-list { background:#f5f5f5; padding:30px; border-radius:12px; margin:40px 0; }
         /* 新增服务板块样式 */
         .upgrade-service {
@@ -121,7 +135,7 @@
                 <div class="col">
                     <h3>成形機と金型加工</h3>
                     <p>成形機は、手のひらサイズの金型で少量試作を可能にします。CNCフライス「DM2400」と組み合わせれば、金型製作から成形までを自社で完結。サステナブル素材の成形テストや小ロット生産に最適です。</p>
-                    <!-- 图片链接：点击进入 INARI 产品页面 -->
+                    <!-- 图片链接：点击进入 DM2400 产品页面 -->
                     <a href="product-dm2400.html" class="service-image">
                         <img src="images/service/dm2400-service.jpg" alt="CNC DM2400">
                     </a>
@@ -153,10 +167,10 @@
                 <div class="col">
                     <h3>品質へのこだわり</h3>
                     <p>すべての製品は専用ソフトウェアとマニュアルに基づく動作確認を実施。10年以上の経験に基づくノウハウで、担当者によらない高い検査品質を維持しています。</p>
-                    
-                    
+                    <!-- 静态图片：无链接，仅用于展示 -->
+                    <div class="static-image">
                         <img src="images/service/quality-check.jpg" alt="検査工程">
-                    
+                    </div>
                 </div>
             </div>
 
