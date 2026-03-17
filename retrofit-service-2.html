@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主轴电机更换・精度丝杠升级・LinuxCNC实时化 | LINSAI</title>
+    <style>
+        /* ===== 全局样式 (与service.html保持一致) ===== */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height:1.7;
+            color:#1a1a1a;
+            background:#fff;
+        }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        header {
+            border-bottom:1px solid #e5e5e5;
+            padding:20px 0;
+        }
+        .header-inner {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .logo {
+            font-size:1.8rem;
+            font-weight:700;
+            letter-spacing:1px;
+            color:#2c3e50;
+            text-decoration:none;
+        }
+        .nav-menu {
+            display:flex;
+            list-style:none;
+            gap:32px;
+            flex-wrap:wrap;
+        }
+        .nav-menu a {
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+            font-size:0.95rem;
+            transition:color 0.2s;
+        }
+        .nav-menu a:hover { color:#c0392b; }
+        .lang-switch {
+            display:flex;
+            gap:8px;
+            font-size:0.9rem;
+        }
+        .lang-switch a {
+            text-decoration:none;
+            color:#888;
+        }
+        .lang-switch a.active {
+            color:#1a1a1a;
+            font-weight:500;
+        }
+        footer {
+            border-top:1px solid #eee;
+            padding:30px 0;
+            margin-top:60px;
+            text-align:center;
+            color:#888;
+            font-size:0.9rem;
+        }
+        /* 页面特有样式 */
+        .page-title {
+            background:#f9f9f9;
+            padding:60px 0 20px;
+            text-align:center;
+            margin-bottom:50px;
+        }
+        .page-title h1 {
+            font-size:2.4rem;
+            font-weight:500;
+            letter-spacing:2px;
+        }
+        .section {
+            padding:40px 0 60px;
+        }
+        .section h2 {
+            font-size:1.8rem;
+            font-weight:500;
+            margin-bottom:30px;
+            padding-bottom:10px;
+            border-bottom:2px solid #c0392b;
+            display:inline-block;
+        }
+        /* 两列布局（每行两张卡片） */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .service-image {
+            width: 100%;
+            height: 280px;          /* 统一图片高度 */
+            object-fit: cover;
+            display: block;
+            background-color: #f0f0f0;
+        }
+        .service-content {
+            padding: 25px 25px 30px;
+        }
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #c0392b;
+        }
+        .service-content p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width:768px) {
+            .nav-menu { display:none; }
+            .service-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LINSAI</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="company.html">企業情報</a></li>
+                <li><a href="message.html">創業者メッセージ</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <div class="lang-switch">
+                <a href="#" class="active">JP</a>
+                <span>/</span>
+                <a href="#">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <div class="container">
+            <h1>主轴电机更换・精度丝杠升级・LinuxCNC实时化</h1>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="section">
+            <h2>サービス内容</h2>
+            <p style="margin-bottom:30px;">NC工作機械の性能を飛躍的に向上させる、当社のトータルアップグレードサービスです。</p>
+
+            <!-- 两列布局：四个服务卡片 -->
+            <div class="service-grid">
+                <!-- 1. 主轴电机更换 -->
+                <div class="service-card">
+                    <img src="images/service/PNC-10L/retrofit2-spindle.jpg" alt="主轴电机更换" class="service-image">
+                    <div class="service-content">
+                        <h3>1. 主軸サーボモータ</h3>
+                        <p>YASKAWA 200W サーボモータへの交換により、主軸の応答性・トルク特性が向上。低速域からの安定した加工と消費電力削減を実現します。</p>
+                    </div>
+                </div>
+                <!-- 2. XY轴精度丝杠升级 -->
+                <div class="service-card">
+                    <img src="images/service/PNC-10L/retrofit2-ballscrew.jpg" alt="XY轴精度丝杠" class="service-image">
+                    <div class="service-content">
+                        <h3>2. X Y軸ボールねじに交換</h3>
+                        <p>高精度ボールねじに交換し、バックラッシを最小限に抑制。位置決め精度と繰り返し精度が大幅に向上し、微細加工が可能になります。</p>
+                    </div>
+                </div>
+                <!-- 3. LinuxCNC + FPGA运动卡 -->
+                <div class="service-card">
+                    <img src="images/service/PNC-10L/retrofit2-linuxcnc.jpg" alt="LinuxCNC实时系统" class="service-image">
+                    <div class="service-content">
+                        <h3>3. 更新LinuxCNC ネットワークモーションカード</h3>
+                        <p>オープンソースCNC「LinuxCNC」とFPGAベースのネットワークモーションカードを導入。リアルタイムOS上で動作し、高速・高応答な制御と安定した加工を実現します。</p>
+                    </div>
+                </div>
+                <!-- 4. 重复精度测试 -->
+                <div class="service-card">
+                    <img src="images/service/PNC-10L/retrofit2-test.jpg" alt="重复精度测试" class="service-image">
+                    <div class="service-content">
+                        <h3>4. 位置決め精度</h3>
+                        <p>各軸の位置決め精度・繰り返し精度を検証。性能を保証します。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 注：图片路径为示例，请替换为实际图片文件 -->
+            <p style="text-align: center; color: #888; margin-top: 20px;">※画像はイメージです。実際の作業とは異なる場合があります。</p>
+            <div style="text-align: center;">
+                <a href="service.html" class="back-link">← 事業内容に戻る</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
