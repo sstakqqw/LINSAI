@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FA部品一覧 | LINSAI</title>
+    <style>
+        /* ===== 全局样式 (与service.html保持一致) ===== */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height:1.7;
+            color:#1a1a1a;
+            background:#fff;
+        }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        header {
+            border-bottom:1px solid #e5e5e5;
+            padding:20px 0;
+        }
+        .header-inner {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .logo {
+            font-size:1.8rem;
+            font-weight:700;
+            letter-spacing:1px;
+            color:#2c3e50;
+            text-decoration:none;
+        }
+        .nav-menu {
+            display:flex;
+            list-style:none;
+            gap:32px;
+            flex-wrap:wrap;
+        }
+        .nav-menu a {
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+            font-size:0.95rem;
+            transition:color 0.2s;
+        }
+        .nav-menu a:hover { color:#c0392b; }
+        .lang-switch {
+            display:flex;
+            gap:8px;
+            font-size:0.9rem;
+        }
+        .lang-switch a {
+            text-decoration:none;
+            color:#888;
+        }
+        .lang-switch a.active {
+            color:#1a1a1a;
+            font-weight:500;
+        }
+        footer {
+            border-top:1px solid #eee;
+            padding:30px 0;
+            margin-top:60px;
+            text-align:center;
+            color:#888;
+            font-size:0.9rem;
+        }
+        /* 页面特有样式 */
+        .page-title {
+            background:#f9f9f9;
+            padding:60px 0 20px;
+            text-align:center;
+            margin-bottom:50px;
+        }
+        .page-title h1 {
+            font-size:2.4rem;
+            font-weight:500;
+            letter-spacing:2px;
+        }
+        .message-box {
+            text-align: center;
+            padding: 80px 20px;
+            font-size: 1.8rem;
+            color: #666;
+            background: #fafafa;
+            border-radius: 12px;
+            margin: 50px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width:768px) {
+            .nav-menu { display:none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LINSAI</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="service.html">事業内容</a></li>
+                <li><a href="company.html">企業情報</a></li>
+                <li><a href="message.html">創業者メッセージ</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <div class="lang-switch">
+                <a href="#" class="active">JP</a>
+                <span>/</span>
+                <a href="#">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <div class="container">
+            <h1>FA部品一覧</h1>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="message-box">
+            <p>📦在庫整理中....</p>
+            <p style="font-size:1rem; margin-top:20px;">もう少々お待ちください。</p>
+        </div>
+        <div style="text-align: center;">
+            <a href="service.html" class="back-link">← 事業内容に戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 LINSAI Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
